@@ -6,7 +6,10 @@ import {
   ReferenceField,
   ReferenceInput,
   ReferenceOneField,
+  RichTextField,
+  Show,
   SimpleForm,
+  SimpleShowLayout,
   TextField,
   TextInput,
   UrlField
@@ -46,10 +49,10 @@ export const EventCreate = (props) => (
         step={1}
         fullWidth
       />
-      <Input label="Form URL" source="formLink" fullWidth />
+      <TextInput label="Form URL" source="formLink" fullWidth />
       <ReferenceInput
         label="Department"
-        source="department"
+        source="departmentId"
         reference="department"
         emptyText="Department"
         fullWidth
@@ -74,16 +77,24 @@ export const EventList = (props) => (
 );
 
 export const EventShow = (props) => (
-  <Show>
+  <Show {...props}>
     <SimpleShowLayout>
+        <TextField source="id" />
         <TextField source="name" />
         <TextField source="slug" />
-        <DateField source="date" />
+        <DateField source="date" showTime />
         <TextField source="type" />
+        <TextField source="summary" />
+        <RichTextField source="content" />
+        <TextField source="poster" />
+        <TextField source="location" />
         <TextField source="registrationFee" />
-        <UrlField source="formLink" />
+        <NumberField source="maximumRegistration" />
+        <TextField source="formLink" />
+        <DateField source="createdAt" showTime />
         <ReferenceField source="departmentId" reference="department">
             <TextField source="name" />
+            <TextField source="id" />
         </ReferenceField>
     </SimpleShowLayout>
   </Show>
