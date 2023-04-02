@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Department {
+    id              String      @id @default(cuid())
+    name            String
+    events          Event[]
+}
+
+model Event {
+    id              String      @id @default(cuid())
+    name            String      @unique
+    content         String?
+    image           String?
+    type            String?
+    date            DateTime?
+    location        String?
+    createDate      DateTime    @default(now())
+    department      Department  @relation(fields: [departmentId], references: [id])
+    departmentId    String
+}
