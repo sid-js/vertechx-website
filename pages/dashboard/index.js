@@ -35,7 +35,7 @@ export const getServerSideProps = async (ctx) => {
       id: session.user.id
     }
   })
-  if(!data.id){
+  if(!data){
     return {
       redirect: {
         destination: '/',
@@ -43,7 +43,6 @@ export const getServerSideProps = async (ctx) => {
       },
     }
   }
-  console.log(data)
   return {
     props: {
       authenticated: true,
