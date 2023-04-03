@@ -1,4 +1,4 @@
-import { Create, SimpleForm, TextInput } from "react-admin";
+import { Create, Datagrid, List, SimpleForm, TextField, TextInput } from "react-admin";
 
 export const DepartmentCreate = (props) => (
     <Create {...props}>
@@ -7,3 +7,11 @@ export const DepartmentCreate = (props) => (
         </SimpleForm>
     </Create>
 );
+
+export const DepartmentList = (props) => (
+    <List {...props}>
+      <Datagrid>
+        <TextField source="name" />
+      </Datagrid>
+    </List>
+  );

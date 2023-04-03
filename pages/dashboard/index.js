@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import dynamic from "next/dynamic";
-import prisma from "../../prisma/client"
 import { authOptions } from "../api/auth/[...nextauth]"
+import { PrismaClient } from "@prisma/client";
 
 const App = dynamic(() => import("../../admin/App"), { ssr: false });
 
@@ -29,11 +29,21 @@ export const getServerSideProps = async (ctx) => {
       },
     }
   }
+  const prisma = new PrismaClient()
   const data = await prisma.admin.findUnique({
     where: {
-      userId: session.user.id
+      id: session.user.id
     }
   })
+  if(!data.id){
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
+  console.log(data)
   return {
     props: {
       authenticated: true,

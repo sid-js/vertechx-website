@@ -1,8 +1,11 @@
 import {
+  AutocompleteInput,
   Create,
   Datagrid,
   DateField,
+  Edit,
   List,
+  NumberField,
   ReferenceField,
   ReferenceInput,
   ReferenceOneField,
@@ -24,7 +27,7 @@ export const EventCreate = (props) => (
     <SimpleForm>
       <TextInput label="Name" source="name" fullWidth />
       <TextInput label="URL Slug" source="slug" fullWidth />
-      <TextInput label="Event Summary" source="summary" fullWidth />
+      <TextInput label="Event Summary"  multiline source="summary" fullWidth />
       <RichTextInput
         aria-rowcount={10}
         label="Content"
@@ -56,14 +59,16 @@ export const EventCreate = (props) => (
         reference="department"
         emptyText="Department"
         fullWidth
-      />
+      >
+        <AutocompleteInput optionText="name" label="Department" fullWidth/>
+        </ReferenceInput>
     </SimpleForm>
   </Create>
 );
 
 export const EventList = (props) => (
   <List {...props}>
-    <Datagrid>
+    <Datagrid rowClick="show">
       <TextField source="name" />
       <TextField source="slug" />
       <DateField source="date" />
@@ -98,4 +103,48 @@ export const EventShow = (props) => (
         </ReferenceField>
     </SimpleShowLayout>
   </Show>
+);
+
+export const EventEdit = (props) => (
+  <Edit {...props}>
+    <SimpleForm>
+      <TextInput label="Name" source="name" fullWidth />
+      <TextInput label="URL Slug" source="slug" fullWidth />
+      <TextInput label="Event Summary"  multiline source="summary" fullWidth />
+      <RichTextInput
+        aria-rowcount={10}
+        label="Content"
+        source="content"
+        fullWidth
+      />
+      <TextInput label="Poster URL" source="poster" fullWidth />
+      <RadioButtonGroupInput
+        label="Type"
+        source="type"
+        choices={[
+          { id: "workshop", name: "Workshop" },
+          { id: "event", name: "Event" },
+        ]}
+      />
+      <DateTimeInput label="Date" source="date" />
+      <TextInput label="Location" source="location" fullWidth />
+      <TextInput label="Registration Fee" source="registrationFee" fullWidth />
+      <NumberInput
+        label="Maximum Registrations"
+        source="maximumRegistration"
+        step={1}
+        fullWidth
+      />
+      <TextInput label="Form URL" source="formLink" fullWidth />
+      <ReferenceInput
+        label="Department"
+        source="departmentId"
+        reference="department"
+        emptyText="Department"
+        fullWidth
+      >
+        <AutocompleteInput optionText="name" label="Department" fullWidth/>
+        </ReferenceInput>
+    </SimpleForm>
+  </Edit>
 );
