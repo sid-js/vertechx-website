@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: { space: ["Space Grotesk", "sans-serif"] },
     extend: {},
   },
   plugins: [],
