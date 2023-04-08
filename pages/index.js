@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/Components/Navbar";
-import grid from "../public/grid.svg";
+import aboutimg from "../public/vertechx-about.png";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -54,10 +55,7 @@ const Home = () => {
               </span>
             </div>
             <div className="basis-1/2">
-              <img
-                src="https://mvjce.edu.in/wp-content/uploads/2016/06/vertechx-3.jpg"
-                alt="vertechx"
-              />
+              <Image src={aboutimg} width={1430} height={953} alt="about" />
             </div>
           </div>
         </article>
