@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import {About} from 'about'
 
 function Navbar() {
   return (
