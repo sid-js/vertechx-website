@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 
-
 function Navbar() {
   return (
     <nav className=" border-transparent-150 bg-none bg-opacity-20  z-50 sticky top-0 px-14 py-2  ">
