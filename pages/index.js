@@ -38,7 +38,7 @@ const Home = () => {
         <article className="flex items-center justify-center mt-6 ">
           <div className="flex items-center justify-center w-[80%] gap-10 bg-gradient-to-b from-[#161616] to-transparent p-20">
             <div className="flex items-center justify-center text-left basis-1/2 text-xl">
-              <span className="text-white">
+              <span className="text-white text-space">
                 VertechX is an annual technical fest conducted by MVJ College of
                 Engineering in Bangalore, India. It is a platform for students
                 and tech enthusiasts from different colleges and universities to
