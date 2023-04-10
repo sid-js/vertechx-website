@@ -7,7 +7,10 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
+      <main className="font-space">
       <Component {...pageProps} />
+      </main>
+      
     </SessionProvider>
   );
 }
