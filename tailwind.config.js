@@ -9,5 +9,5 @@ module.exports = {
     fontFamily: { space: ["Space Grotesk"] },
     extend: {},
   },
-  plugins: [],
+  plugins: [ require('@tailwindcss/typography'),],
 };
