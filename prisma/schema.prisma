@@ -13,16 +13,16 @@ datasource db {
 
 model Department {
   id     String  @id @default(cuid())
-  name   String
+  name   String  @db.Text
   events Event[]
 }
 
 model Event {
   id                  String      @id @default(cuid())
-  name                String?
+  name                String?     @db.Text
   slug                String      @unique
-  summary             String?
-  content             String?
+  summary             String?      @db.Text
+  content             String?      @db.LongText
   poster              String?
   type                String?
   date                DateTime?
