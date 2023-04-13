@@ -5,7 +5,9 @@
 
 .stars,
 .twinkling,
-.clouds {
+.clouds,
+.planet,
+.gradient-light {
   position: absolute;
   display: block;
   top: 0;
@@ -30,11 +32,37 @@
   animation: move-twink-back 200s linear infinite;
 }
 
-.clouds {
+.planet {
   z-index: 2;
+  background: transparent url('/planet.png') no-repeat;
+  background-position: bottom -50% right -40%;
+  scale: 130%;
+  animation: rotate-planet 20s linear infinite alternate-reverse;
+}
+
+.gradient-light {
+  z-index: 2;
+  background: transparent url('/gradient-1.png') no-repeat;
+  scale: 100%;
+  animation: rotate-planet 50s linear infinite alternate-reverse;
+}
+
+.clouds {
+  z-index: 3;
   background: transparent url('https://i.imgur.com/mHbScrQ.png') repeat top
     center;
   animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes rotate-planet {
+  from {
+    transform: rotate(10deg);
+    transform: skew(1deg);
+  }
+  to {
+    transform: rotate(-10deg);
+    transform: skew(10deg);
+  }
 }
 
 @keyframes move-twink-back {

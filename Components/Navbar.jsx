@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Navbar() {
   return (
-    <nav className='sticky  top-0 left-0 w-full   z-50 px-5 py-2 bg-white bg-opacity-0 backdrop-blur-sm border h-full border-none rounded-lg'>
+    <nav className='fixed top-0 w-full  z-50 px-5 py-2 bg-white bg-opacity-0 backdrop-blur-sm border h-24 border-none rounded-lg'>
       <div className='w-full flex items-center justify-between p-5'>
         <Link href='#' className='flex items-center'>
           <img
@@ -17,20 +17,37 @@ function Navbar() {
           <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent 
             dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
-              <Link href="#" className="block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
-               md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</Link>
+              <Link
+                href='#'
+                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                aria-current='page'
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/About" className="block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
-               md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</Link>
+              <Link
+                href='/About'
+                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/Events" className="block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
-               md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</Link>
+              <Link
+                href='/Events'
+                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              >
+                Events
+              </Link>
             </li>
             <li>
-              <Link href="/Contacts" className="block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
-               md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</Link>
+              <Link
+                href='/Contacts'
+                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
