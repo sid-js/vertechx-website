@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Navbar() {
   return (
-    <nav className='sticky  top-0 left-0 w-full   z-50 px-5 py-2 bg-white bg-opacity-0 backdrop-blur-sm border h-full border-none rounded-lg'>
+    <nav className='fixed top-0 w-full  z-50 px-5 py-2 bg-white bg-opacity-0 backdrop-blur-sm border h-24 border-none rounded-lg'>
       <div className='w-full flex items-center justify-between p-5'>
         <Link href='#' className='flex items-center'>
           <img
