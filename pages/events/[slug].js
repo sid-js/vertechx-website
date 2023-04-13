@@ -12,18 +12,18 @@ import Navbar from '@/Components/Navbar';
 function EventPage({ eventData }) {
   console.log(eventData);
   return (
-    <div className='w-full  bg-no-repeat items-center bg-cover md:px-32 flex flex-col  dark:text-white min-h-screen h-full gap-8 p-3'>
+    <div className='w-full  bg-no-repeat items-center bg-cover md:px-32 mt-24 flex flex-col  dark:text-white min-h-screen h-full gap-8 p-3'>
       <Navbar />
-      <div className='flex flex-col md:flex-row-reverse justify-between gap-32 md:gap-36 w-[95%] md:w-[100%] items-start min-h-full bg-white bg-opacity-5 backdrop-blur-sm border h-full border-gray-700 rounded-lg p-8 md:p-10'>
-        <div className='basis-1/3 bg-blue-500 rounded-lg max-h-min'>
+      <div className='flex flex-col md:flex-row-reverse justify-between gap-4 md:gap-36 w-[95%] md:w-[100%] items-start h-max bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-8 md:p-10'>
+        <div className='basis-1/3 bg-blue-500 rounded-lg h-max'>
           <Image
             className='object-cover rounded-lg'
             alt='poster'
             src={samplePoster}
           />
         </div>
-        <div className='basis-2/3  flex flex-col gap-2 justify-between items-start min-h-full'>
-          <div className='flex flex-col'>
+        <div className='basis-2/3  flex flex-col gap-2 justify-between items-start min-h-full h-max'>
+          <div className='flex flex-col h-max'>
             <h1 className=' text-4xl md:text-6xl font-semibold'>
               {eventData.name}
             </h1>
@@ -36,7 +36,7 @@ function EventPage({ eventData }) {
                 {moment(eventData.date).format('MMMM Do YYYY, h:mm: a')}
               </span>
             </div>
-            <p className='text-xl md:text-2xl mt-6'>
+            <p className='text-xl md:text-2xl mt-6 '>
               {eventData.summary}
               <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -47,7 +47,7 @@ function EventPage({ eventData }) {
             </p>
           </div>
 
-          <div className='flex flex-col w-full gap-6'>
+          <div className='flex-col w-full gap-6 h-full flex'>
             <div className='text-xl md:text-2xl mt-6 flex flex-row gap-2 items-center'>
               <TbCoinRupee className='text-purple-500' />
               <span>Registration Fee : </span>
