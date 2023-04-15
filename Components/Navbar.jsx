@@ -25,14 +25,17 @@ function Navbar() {
             </svg>
           </button>
         </div>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent 
-            dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+        <div className='hidden w-full md:block md:w-auto' id='navbar-solid-bg'>
+          <ul
+            className='flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent 
+            dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700'
+          >
             <li>
               <Link
                 href='/home'
                 className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
-                aria-current='page'>
+                aria-current='page'
+              >
                 Home
               </Link>
             </li>
@@ -69,7 +72,8 @@ function Navbar() {
             <Link
               href='/home'
               className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
-              aria-current='page'>
+              aria-current='page'
+            >
               Home
             </Link>
             <Link
@@ -91,7 +95,6 @@ function Navbar() {
               Contact
             </Link>
           </div>
-
         </div>
       ) : null}
     </nav>
