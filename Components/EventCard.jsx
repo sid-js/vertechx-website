@@ -21,7 +21,7 @@ const EventCard = ({ eventData }) => {
       </div>
       <div className='basis-2/3  flex flex-col gap-2 justify-center items-start self-start'>
         <div className='flex flex-col'>
-          <h1 className=' text-xl  font-semibold group-hover:text-purple-500'>
+          <h1 className=' text-2xl  font-semibold group-hover:text-purple-500'>
             {eventData.name}
           </h1>
           <h3 className=' text-lg  font-normal text-slate-400'>
