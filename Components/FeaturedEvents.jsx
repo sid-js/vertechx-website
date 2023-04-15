@@ -6,15 +6,15 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 2000 },
-    items: 5,
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 2000, min: 1024 },
-    items: 4,
+    items: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 4,
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -43,21 +43,23 @@ const sampleEvent = {
 };
 function FeaturedEvents() {
   return (
-    <section id='Featured Events' className='w-full flex flex-col gap-4'>
-      <h1 className='text-4xl text-white font-bold text-center'>
+    <section
+      id='Featured Events'
+      className='w-full flex flex-col gap-4 min-h-screen'
+    >
+      <h1 className='text-4xl md:text-7xl text-white font-semibold text-center'>
         FEATURED EVENTS
       </h1>
       <div>
         <Carousel
           responsive={responsive}
-          className='w-full gap-10'
+          className='w-full gap-10 py-8'
           autoPlay={true}
           autoPlaySpeed={5000}
           showDots={true}
           swipeable={true}
           renderDotsOutside={true}
           dotListClass='dots'
-          renderButtonGroupOutside={true}
         >
           <EventCard eventData={sampleEvent} />
           <EventCard eventData={sampleEvent} />
