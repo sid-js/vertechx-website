@@ -23,15 +23,16 @@ const Home = () => {
       </Head>
       <div className='w-full '>
         <main className='flex flex-col items-center w-full h-screen px-4 md:px-32 '>
-          <header className='flex flex-col w-full h-screen justify-center items-center shrink-0'>
-            <h1 className='bg-clip-text drop-shadow-sm text-transparent text-center self-center font-space text-5xl md:text-8xl lg:text-9xl font-extrabold  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer '>
+          <header className='flex flex-col w-full h-screen justify-center items-center shrink-0 relative'>
+            <div className='w-full h-1/2 blur-lg bg-black absolute opacity-10 top-50 z-[-1] rounded-full'></div>
+            <h1 className='bg-clip-text drop-shadow-sm text-transparent text-center self-center font-space text-6xl md:text-8xl lg:text-9xl font-extrabold  bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 cursor-pointer '>
               TECH IN MOMENTUM
             </h1>
-            <h1 className='text-white text-center self-center font-space text-xl md:text-2xl lg:text-2xl font-regular  bg-gradient-to-r cursor-pointer '>
+            <p className='text-white text-center self-center drop-shadow-md  font-space text-xl md:text-2xl lg:text-2xl font-regular  bg-gradient-to-r cursor-pointer '>
               Experience the future at VertechX: The ultimate annual tech fest
               where students flaunt their skills in robotics, AI, ML, and
               cybersecurity and more!
-            </h1>
+            </p>
           </header>
 
           <section className='h-screen shrink-0'>
@@ -71,12 +72,12 @@ const Home = () => {
               </div>
             </article>
           </section>
-          <section className='h-screen shrink-0'>
+          <section className='max-h-screen  mb-96 shrink-0'>
             <div className='flex flex-col md:flex-row md:gap-10 items-center justify-center w-full '>
               <span className='text-white text-2xl md:text-7xl font-semibold font-space'>
                 MARK YOUR CALENDARS
               </span>
-              <span className='bg-clip-text w-full items-end text-transparent flex flex-col text-6xl md:text-9xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
+              <span className='bg-clip-text w-full items-center md:items-end text-transparent flex flex-col text-6xl md:text-9xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
                 <span>MAY</span>
                 <span>19 & 20</span>
               </span>
