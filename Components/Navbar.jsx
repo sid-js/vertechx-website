@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import react, { useState } from 'react';
 
+
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
@@ -10,7 +11,7 @@ function Navbar() {
   return (
     <nav className='fixed top-0 w-full  z-50 px-5 py-2 bg-white bg-opacity-0 backdrop-blur-sm border h-24 border-none rounded-lg'>
       <div className='w-full flex items-center justify-between p-5'>
-        <Link href='#' className='flex items-center'>
+        <Link href='/' className='flex items-center'>
           <img
             src='/logo.svg'
             className='h-10 w-200 m-200px border-transparent'
@@ -20,7 +21,7 @@ function Navbar() {
         </Link>
         <div className='block md:hidden'>
           <button className='block md:hiddem' onClick={toggleMenu}>
-            <svg className='w-6 h-6 fill-current' viewBox='0 0 24 24'>
+            <svg className='w-10 h-12 fill-current' viewBox='0 0 24 24'>
               <path d='M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z' />
             </svg>
           </button>
@@ -30,7 +31,7 @@ function Navbar() {
             dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
               <Link
-                href='/home'
+                href='/'
                 className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
                 aria-current='page'>
                 Home
@@ -67,26 +68,26 @@ function Navbar() {
         <div className='md:hidden'>
           <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
             <Link
-              href='/home'
-              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
+              href='/'
+              className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
               aria-current='page'>
               Home
             </Link>
             <Link
               href='/about'
-              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
+              className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
             >
               About
             </Link>
             <Link
-              href='/Events'
-              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
+              href='/events'
+              className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
             >
               Events
             </Link>
             <Link
               href='/contacts'
-              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
+              className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
             >
               Contact
             </Link>
