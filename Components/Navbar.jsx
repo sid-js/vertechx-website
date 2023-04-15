@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import react, { useState } from 'react';
 
 function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <nav className='fixed top-0 w-full  z-50 px-5 py-2 bg-white bg-opacity-0 backdrop-blur-sm border h-24 border-none rounded-lg'>
       <div className='w-full flex items-center justify-between p-5'>
@@ -13,38 +18,44 @@ function Navbar() {
             aria-current='page'
           />
         </Link>
+        <div className='block md:hidden'>
+          <button className='block md:hiddem' onClick={toggleMenu}>
+            <svg className='w-6 h-6 fill-current' viewBox='0 0 24 24'>
+              <path d='M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z' />
+            </svg>
+          </button>
+        </div>
         <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
           <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent 
             dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
               <Link
-                href='#'
-                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
-                aria-current='page'
-              >
+                href='/home'
+                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                aria-current='page'>
                 Home
               </Link>
             </li>
             <li>
               <Link
-                href='/About'
-                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                href='/about'
+                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 About
               </Link>
             </li>
             <li>
               <Link
-                href='/Events'
-                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                href='/events'
+                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 Events
               </Link>
             </li>
             <li>
               <Link
-                href='/Contacts'
-                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                href='/contacts'
+                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 Contact
               </Link>
@@ -52,6 +63,37 @@ function Navbar() {
           </ul>
         </div>
       </div>
+      {showMenu ? (
+        <div className='md:hidden'>
+          <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+            <Link
+              href='/home'
+              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+              aria-current='page'>
+              Home
+            </Link>
+            <Link
+              href='/about'
+              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+            >
+              About
+            </Link>
+            <Link
+              href='/Events'
+              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+            >
+              Events
+            </Link>
+            <Link
+              href='/contacts'
+              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+            >
+              Contact
+            </Link>
+          </div>
+
+        </div>
+      ) : null}
     </nav>
   );
 }
