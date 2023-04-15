@@ -1,6 +1,5 @@
 import React from 'react';
 import EventCard from '@/Components/EventCard';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 const responsive = {
   superLargeDesktop: {
