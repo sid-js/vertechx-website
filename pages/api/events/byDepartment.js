@@ -5,7 +5,7 @@ export default async function (req, res) {
   try {
     const events = await prisma.event.findMany({
       where: {
-        departmentId: departmentId,
+        departmentId: departmentId ? departmentId : '',
       },
       orderBy: {
         createdAt: 'desc',
@@ -25,7 +25,7 @@ export default async function (req, res) {
       take: limit,
       skip: page * limit,
     });
-    const hasMore = !(events.length < 6);
+    const hasMore = !(events.length < limit);
     return res.json({ events, nextPage: hasMore });
   } catch (e) {
     return res.json({ error: e });

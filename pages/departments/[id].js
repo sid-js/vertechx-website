@@ -36,9 +36,7 @@ function EventPage({ eventData }) {
                 {eventData.name}
               </h1>
               <h3 className=' text-xl md:text-2xl font-normal text-slate-400'>
-                <Link
-                  href={`/events?initialDepartment=${eventData.departmentId}`}
-                >
+                <Link href={`/department/${eventData.departmentId}`}>
                   {eventData.department.name}
                 </Link>
               </h3>

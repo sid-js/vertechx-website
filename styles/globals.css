@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.html, .body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  height: 100%;
+
+}
 .stars,
 .twinkling,
 .clouds,
@@ -16,8 +24,9 @@
   right: 0;
   min-width: 100vw;
   min-height: 100vh;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .stars {
