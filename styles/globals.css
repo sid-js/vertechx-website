@@ -3,13 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.html, .body{
+.html,
+.body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
   height: 100%;
-
 }
 .stars,
 .twinkling,
@@ -26,7 +25,6 @@
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  
 }
 
 .stars {
@@ -41,19 +39,39 @@
   animation: move-twink-back 200s linear infinite;
 }
 
+@media (max-width: 767px) {
+  .planet {
+    z-index: 2;
+    background-position: bottom -400% right 120% !important;
+    scale: 130%;
+    animation: rotate-planet 5s linear infinite alternate-reverse;
+  }
+}
 .planet {
   z-index: 2;
   background: transparent url('/planet.png') no-repeat;
   background-position: bottom -50% right -40%;
   scale: 130%;
-  animation: rotate-planet 20s linear infinite alternate-reverse;
+  animation: rotate-planet 5s linear infinite alternate-reverse;
 }
 
 .gradient-light {
   z-index: 2;
   background: transparent url('/gradient-1.png') no-repeat;
-  scale: 100%;
+  scale: 300%;
+  top: 50;
+  background-size: contain;
   animation: rotate-planet 50s linear infinite alternate-reverse;
+}
+@media (max-width: 767px) {
+  .gradient-light {
+    z-index: 2;
+    background: transparent url('/gradient-1.png') no-repeat;
+    background-size: contain;
+    background-position: bottom 100% right 0;
+
+    scale: 200%;
+  }
 }
 
 .clouds {
@@ -65,12 +83,12 @@
 
 @keyframes rotate-planet {
   from {
-    transform: rotate(10deg);
+    transform: rotate(20deg);
     transform: skew(1deg);
   }
   to {
     transform: rotate(-10deg);
-    transform: skew(10deg);
+    transform: skew(5deg);
   }
 }
 
@@ -91,7 +109,50 @@
     background-position: 10000px 0;
   }
 }
-
+@keyframes satellite-animation {
+  0% {
+    transform: translateY(-10%) translateX(0%) rotate(0deg);
+  }
+  25% {
+    transform: translateY(0%) translateX(5%) rotate(25deg);
+  }
+  50% {
+    transform: translateY(10%) translateX(0%) rotate(0deg);
+  }
+  75% {
+    transform: translateY(0%) translateX(-5%) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(-10%) translateX(0%) rotate(0deg);
+  }
+}
 .top-layer {
   z-index: 999;
+}
+
+@media (max-width: 767px) {
+  .satellite {
+    animation: satellite-animation linear 70s infinite alternate-reverse;
+    scale: 1.9 !important;
+  }
+}
+.satellite {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: transparent url('/satellite.png') center no-repeat;
+  background-size: contain;
+  scale: 70%;
+  position: absolute;
+  display: block;
+  top: 20% !important;
+  left: 50%;
+  transform-origin: center center;
+  transition: transform 25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dots {
+  position: relative !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }

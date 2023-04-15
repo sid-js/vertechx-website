@@ -43,25 +43,31 @@ const sampleEvent = {
 };
 function FeaturedEvents() {
   return (
-    <section id='Featured Events' className='w-full'>
-      <h1 className='text-4xl text-white font-bold mb-10'>Featured Events</h1>
-      <Carousel
-        responsive={responsive}
-        className='w-full'
-        autoPlay={true}
-        autoPlaySpeed={4000}
-        showDots={true}
-        renderDotsOutside={true}
-        renderButtonGroupOutside={true}
-      >
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-      </Carousel>
+    <section id='Featured Events' className='w-full flex flex-col gap-4'>
+      <h1 className='text-4xl text-white font-bold text-center'>
+        FEATURED EVENTS
+      </h1>
+      <div>
+        <Carousel
+          responsive={responsive}
+          className='w-full gap-10'
+          autoPlay={true}
+          autoPlaySpeed={5000}
+          showDots={true}
+          swipeable={true}
+          renderDotsOutside={true}
+          dotListClass='dots'
+          renderButtonGroupOutside={true}
+        >
+          <EventCard eventData={sampleEvent} />
+          <EventCard eventData={sampleEvent} />
+          <EventCard eventData={sampleEvent} />
+          <EventCard eventData={sampleEvent} />
+          <EventCard eventData={sampleEvent} />
+          <EventCard eventData={sampleEvent} />
+          <EventCard eventData={sampleEvent} />
+        </Carousel>
+      </div>
     </section>
   );
 }
