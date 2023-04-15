@@ -41,21 +41,19 @@ const sampleEvent = {
   departmentId: 'clg0c7igq000494xw4v4vjfif',
   department: { id: 'clg0c7igq000494xw4v4vjfif', name: 'Department of CSE' },
 };
-function GridEvents() {
+function EventsGrid({ events, departmentId = '' }) {
   return (
     <section id='Featured Events' className='w-full'>
-      <h1 className='text-4xl text-white font-bold mb-10'>Featured Events</h1>
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-10'>
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
-        <EventCard eventData={sampleEvent} />
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+        {events?.map((event, index) => {
+          console.log(departmentId);
+          if (event.departmentId === departmentId || departmentId === '') {
+            return <EventCard eventData={event} key={index} />;
+          }
+        })}
       </div>
     </section>
   );
 }
 
-export default GridEvents;
+export default EventsGrid;

@@ -5,7 +5,7 @@ export default async function (req, res) {
   try {
     const events = await prisma.event.findMany({
       where: {
-        departmentId: departmentId,
+        departmentId: departmentId ? departmentId : '',
       },
       orderBy: {
         createdAt: 'desc',
