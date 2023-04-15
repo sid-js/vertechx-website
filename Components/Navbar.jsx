@@ -68,25 +68,25 @@ function Navbar() {
           <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
             <Link
               href='/home'
-              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
               aria-current='page'>
               Home
             </Link>
             <Link
               href='/about'
-              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
             >
               About
             </Link>
             <Link
               href='/Events'
-              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
             >
               Events
             </Link>
             <Link
               href='/contacts'
-              className='block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-purple-500 hover:bg-gray-700'
+              className='block px-3 py-2 text-base font-medium text-white-700  hover:text-purple-500 hover:bg-transparent'
             >
               Contact
             </Link>
