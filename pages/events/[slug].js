@@ -1,7 +1,7 @@
 import React from 'react';
 import samplePoster from '../../public/sample-poster.jpg';
 import Image from 'next/image';
-import { PrismaClient } from '@prisma/client';
+import prisma, { PrismaClient } from '@prisma/client';
 import Link from 'next/link';
 import moment from 'moment/moment';
 import { FiCalendar } from 'react-icons/fi';
@@ -93,8 +93,52 @@ function EventPage({ eventData }) {
 
 export default EventPage;
 
-export const getServerSideProps = async (ctx) => {
-  const slug = ctx.params.slug;
+// export const getServerSideProps = async (ctx) => {
+//   const slug = ctx.params.slug;
+//   const prisma = new PrismaClient();
+//   const event = await prisma.event.findUnique({
+//     where: {
+//       slug: slug,
+//     },
+//     include: {
+//       department: true,
+//     },
+//   });
+//   if (!event) {
+//     return {
+//       notFound: true,
+//     };
+//   }
+//   return {
+//     props: {
+//       eventData: event,
+//     },
+//   };
+// };
+
+export async function getStaticPaths() {
+  const prisma =  new PrismaClient();
+  const eventSlugs = await prisma.event.findMany({
+    select: {
+      slug: true,
+    },
+  });
+  console.log('Loaded Slugs: ', eventSlugs)
+  const paths = eventSlugs.map((event) => {
+    return {
+      params: {
+        slug: event.slug,
+      }
+    }
+  })
+  return {
+    paths: paths,
+    fallback: false, // can also be true or 'blocking'
+  }
+}
+
+export async function getStaticProps(context) {
+  const slug = context.params.slug;
   const prisma = new PrismaClient();
   const event = await prisma.event.findUnique({
     where: {
@@ -109,9 +153,11 @@ export const getServerSideProps = async (ctx) => {
       notFound: true,
     };
   }
+  console.log('Loaded Event: ', event.name);
   return {
     props: {
       eventData: event,
+      revalidate: 60,
     },
   };
-};
+}
