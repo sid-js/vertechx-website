@@ -93,31 +93,7 @@ function EventPage({ eventData }) {
 
 export default EventPage;
 
-// export const getServerSideProps = async (ctx) => {
-//   const slug = ctx.params.slug;
-//   const prisma = new PrismaClient();
-//   const event = await prisma.event.findUnique({
-//     where: {
-//       slug: slug,
-//     },
-//     include: {
-//       department: true,
-//     },
-//   });
-//   if (!event) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-//   return {
-//     props: {
-//       eventData: event,
-//     },
-//   };
-// };
-
 export async function getStaticPaths() {
-  const prisma =  new PrismaClient();
   const eventSlugs = await prisma.event.findMany({
     select: {
       slug: true,
