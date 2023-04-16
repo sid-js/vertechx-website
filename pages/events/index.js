@@ -2,6 +2,7 @@ import DepartmentFilterSidebar from '@/Components/DepartmentFilterSidebar';
 import DepartmentFilterTabs from '@/Components/DepartmentFilterTabs';
 import EventsGrid from '@/Components/EventsGrid';
 import { prisma } from '@/prisma/client';
+import { init } from 'aos';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -49,7 +50,12 @@ const deparments = [
 ];
 
 function AllEventsPage({ events }) {
-  const [selectedDepartment, setSelectedDepartment] = useState('');
+  const router = useRouter();
+  const initialDepartment = router.query.initialDepartment;
+  console.log(initialDepartment);
+  const initial = initialDepartment?initialDepartment:'';
+  console.log(initial);
+  const [selectedDepartment, setSelectedDepartment] = useState(initial);
   const onDepartmentChange = (departmentId) => {
     setSelectedDepartment(departmentId);
     console.log(departmentId);
