@@ -8,8 +8,8 @@ function Navbar() {
     setShowMenu(!showMenu);
   };
   return (
-    <nav className='fixed top-0 w-full  z-50 px-5 py-2 bg-white bg-opacity-0 flex items-center backdrop-blur-sm border h-20 border-none rounded-lg'>
-      <div className='w-full flex items-center justify-between p-5'>
+    <nav className='fixed top-0 flex flex-wrap w-full  z-50 px-5 py-2 bg-white bg-opacity-0 flex items-center backdrop-blur-sm border border-none rounded-lg'>
+      <div className='w-full flex flex-wrap items-center justify-between p-5'>
         <Link href='/' className='flex items-center'>
           <img
             src='/logo.svg'
@@ -20,8 +20,8 @@ function Navbar() {
         </Link>
         <div className='block md:hidden'>
           <button className='block md:hiddem' onClick={toggleMenu}>
-            <svg className='w-10 h-12 fill-current' viewBox='0 0 24 24'>
-              <path d='M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z' />
+            <svg className='w-10 h-12 ' viewBox='0 0 24 24'>
+              <path fill="white"d='M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z' />
             </svg>
           </button>
         </div>
@@ -67,7 +67,7 @@ function Navbar() {
         </div>
       </div>
       {showMenu ? (
-        <div className='md:hidden'>
+        <div className='md:hidden flex flex-col'>
           <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
             <Link
               href='/'
