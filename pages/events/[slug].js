@@ -49,15 +49,7 @@ function EventPage({ eventData }) {
                   {moment(eventData.date).format('MMMM Do YYYY, h:mm: a')}
                 </span>
               </div>
-              <p className='text-xl md:text-2xl mt-6 '>
-                {eventData.summary}
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in.
-              </p>
+              <p className='text-xl md:text-2xl mt-6 '>{eventData.summary}</p>
             </div>
 
             <div className='flex-col w-full gap-6 h-full flex'>
@@ -100,18 +92,18 @@ export async function getStaticPaths() {
       slug: true,
     },
   });
-  console.log('Loaded Slugs: ', eventSlugs)
+  console.log('Loaded Slugs: ', eventSlugs);
   const paths = eventSlugs.map((event) => {
     return {
       params: {
         slug: event.slug,
-      }
-    }
-  })
+      },
+    };
+  });
   return {
     paths: paths,
     fallback: false, // can also be true or 'blocking'
-  }
+  };
 }
 
 export async function getStaticProps(context) {
