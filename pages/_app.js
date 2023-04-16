@@ -2,6 +2,12 @@ import '@/styles/globals.css';
 import { SessionProvider } from 'next-auth/react';
 import Navbar from '@/Components/Navbar';
 import { useEffect, useRef, useState } from 'react';
+import { Space_Grotesk } from 'next/font/google';
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+});
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
@@ -36,8 +42,9 @@ export default function App({
   }, [satellitePos]);
   return (
     <SessionProvider session={session}>
-      <main className='font-space h-screen w-full flex flex-col dark mb-8'>
-        <Navbar />
+      <main
+        className={`font-space h-screen w-full flex flex-col dark mb-8 ${spaceGrotesk.className}`}
+      >
         <Component {...pageProps} />
       </main>
       <div className='-z-10 bg-fixed fixed top-0' ref={containerRef}>

@@ -1,6 +1,7 @@
 import DepartmentFilterSidebar from '@/Components/DepartmentFilterSidebar';
 import DepartmentFilterTabs from '@/Components/DepartmentFilterTabs';
 import EventsGrid from '@/Components/EventsGrid';
+import MainLayout from '@/Components/MainLayout';
 import { prisma } from '@/prisma/client';
 import { init } from 'aos';
 import Head from 'next/head';
@@ -65,21 +66,22 @@ function AllEventsPage({ events }) {
       <Head>
         <title>Events -VertechX</title>
       </Head>
-
-      <main className='mt-28 px-3 md:px-20 flex flex-col gap-10 w-full h-full'>
-        <div className='flex flex-col md:flex-row gap-10 w-full h-full'>
-          <DepartmentFilterSidebar
-            className='basis-1/3'
-            selected={selectedDepartment}
-            onDepartmentChange={onDepartmentChange}
-          />
-          <DepartmentFilterTabs
-            selected={selectedDepartment}
-            onDepartmentChange={onDepartmentChange}
-          />
-          <EventsGrid events={events} departmentId={selectedDepartment} />
-        </div>
-      </main>
+      <MainLayout>
+        <main className='mt-28 px-3 md:px-20 flex flex-col gap-10 w-full h-full'>
+          <div className='flex flex-col md:flex-row gap-10 w-full h-full'>
+            <DepartmentFilterSidebar
+              className='basis-1/3'
+              selected={selectedDepartment}
+              onDepartmentChange={onDepartmentChange}
+            />
+            <DepartmentFilterTabs
+              selected={selectedDepartment}
+              onDepartmentChange={onDepartmentChange}
+            />
+            <EventsGrid events={events} departmentId={selectedDepartment} />
+          </div>
+        </main>
+      </MainLayout>
     </>
   );
 }

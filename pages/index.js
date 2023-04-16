@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import FeaturedEvents from '@/Components/FeaturedEvents';
+import MainLayout from '@/Components/MainLayout';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -21,7 +22,7 @@ const Home = () => {
           content='https://vertechx.vercel.app/public/logo.svg'
         />
       </Head>
-      <div className='w-full '>
+      <MainLayout>
         <main className='flex flex-col items-center w-full h-screen px-4 md:px-32 '>
           <header className='flex flex-col w-full h-screen justify-center items-center shrink-0 relative'>
             <div className='w-full h-1/2 blur-lg bg-black absolute opacity-10 top-50 z-[-1] rounded-full'></div>
@@ -114,7 +115,7 @@ const Home = () => {
             </div>
           </section>
         </main>
-      </div>
+      </MainLayout>
     </>
   );
 };

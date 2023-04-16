@@ -7,7 +7,6 @@ module.exports = {
     './Components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily: { space: ['Space Grotesk'] },
     extend: {},
   },
   plugins: [require('@tailwindcss/typography')],
