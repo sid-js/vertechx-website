@@ -53,7 +53,7 @@ function AllEventsPage({ events }) {
   const router = useRouter();
   const initialDepartment = router.query.initialDepartment;
   console.log(initialDepartment);
-  const initial = initialDepartment?initialDepartment:'';
+  const initial = initialDepartment ? initialDepartment : '';
   console.log(initial);
   const [selectedDepartment, setSelectedDepartment] = useState(initial);
   const onDepartmentChange = (departmentId) => {
@@ -66,8 +66,8 @@ function AllEventsPage({ events }) {
         <title>Events -VertechX</title>
       </Head>
 
-      <main className='mt-28 px-3 md:px-20 flex flex-col gap-10 w-full'>
-        <div className='flex flex-col md:flex-row gap-10 w-full'>
+      <main className='mt-28 px-3 md:px-20 flex flex-col gap-10 w-full h-full'>
+        <div className='flex flex-col md:flex-row gap-10 w-full h-full'>
           <DepartmentFilterSidebar
             className='basis-1/3'
             selected={selectedDepartment}

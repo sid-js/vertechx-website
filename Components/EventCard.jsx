@@ -8,7 +8,7 @@ const EventCard = ({ eventData }) => {
   return (
     <Link
       href={`/events/${eventData.slug}`}
-      className='flex flex-col justify-between mx-auto gap-4 hover:scale-110 group transition-all duration-200  text-white  items-center max-h-[520px] max-w-[380px] bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-6'
+      className='flex flex-col justify-between mx-auto gap-4 hover:scale-105 group transition-all duration-200  text-white  items-center max-h-[520px] max-w-[380px] bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-6'
     >
       <div className='basis-1/3  rounded-lg'>
         <Image
