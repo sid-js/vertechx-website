@@ -1,7 +1,7 @@
 import React from 'react';
 import samplePoster from '../../public/sample-poster.jpg';
 import Image from 'next/image';
-import prisma, { PrismaClient } from '@prisma/client';
+import { prisma } from '@/prisma/client';
 import Link from 'next/link';
 import moment from 'moment/moment';
 import { FiCalendar } from 'react-icons/fi';
@@ -10,6 +10,7 @@ import parse from 'html-react-parser';
 import Navbar from '@/Components/Navbar';
 import Head from 'next/head';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
+
 function EventPage({ eventData }) {
   console.log(eventData);
   return (
@@ -115,7 +116,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const slug = context.params.slug;
-  const prisma = new PrismaClient();
   const event = await prisma.event.findUnique({
     where: {
       slug: slug,
