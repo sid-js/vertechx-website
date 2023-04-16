@@ -1,4 +1,5 @@
 import DepartmentFilterSidebar from '@/Components/DepartmentFilterSidebar';
+import DepartmentFilterTabs from '@/Components/DepartmentFilterTabs';
 import EventsGrid from '@/Components/EventsGrid';
 import { prisma } from '@/prisma/client';
 import Head from 'next/head';
@@ -59,17 +60,14 @@ function AllEventsPage({ events }) {
         <title>Events -VertechX</title>
       </Head>
 
-      <main className='mt-36 px-3 md:px-20 flex flex-col gap-10 w-full'>
-        <span className='text-white text-2xl md:text-7xl font-semibold font-space'>
-          {selectedDepartment
-            ? deparments.filter(
-                (department) => department.id === selectedDepartment
-              )[0].name
-            : 'All Events'}
-        </span>
-        <div className='flex flex-row gap-10 w-full'>
+      <main className='mt-28 px-3 md:px-20 flex flex-col gap-10 w-full'>
+        <div className='flex flex-col md:flex-row gap-10 w-full'>
           <DepartmentFilterSidebar
             className='basis-1/3'
+            selected={selectedDepartment}
+            onDepartmentChange={onDepartmentChange}
+          />
+          <DepartmentFilterTabs
             selected={selectedDepartment}
             onDepartmentChange={onDepartmentChange}
           />

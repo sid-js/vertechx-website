@@ -21,6 +21,8 @@ const responsive = {
   },
 };
 
+import deparments from '@/constants/departments';
+import DepartmentFilterTabs from './DepartmentFilterTabs';
 const sampleEvent = {
   id: 'clgacco97000394icyi0ftrhx',
   name: 'Capture with Linux',
@@ -42,8 +44,15 @@ const sampleEvent = {
 };
 function EventsGrid({ events, departmentId = '' }) {
   return (
-    <section id='Featured Events' className='w-full'>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+    <section id='Featured Events' className='w-full flex flex-col gap-5'>
+      <span className='text-white text-3xl md:text-5xl font-semibold font-space self-center md:self-start'>
+        {departmentId
+          ? deparments.filter((department) => department.id === departmentId)[0]
+              .name
+          : 'All Events'}
+      </span>
+
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-10 overflow-y-scroll scrollbar-hide'>
         {events?.map((event, index) => {
           console.log(departmentId);
           if (event.departmentId === departmentId || departmentId === '') {

@@ -156,3 +156,15 @@
   margin-top: 10px !important;
   margin-bottom: 10px !important;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.rts___tab___selected {
+  background-color: blueviolet !important;
+  position: relative;
+  width: 100%;
+  border: #818181 1px solid !important;
+  box-shadow: none;
+}
