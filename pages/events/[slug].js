@@ -29,7 +29,7 @@ function EventPage({ eventData }) {
               <Image
                 className='object-cover rounded-lg'
                 alt='poster'
-                src={samplePoster}
+                src={eventData.poster}
               />
             </div>
             <div className='basis-2/3  flex flex-col gap-2 justify-between items-start min-h-full h-max'>
