@@ -62,7 +62,7 @@ export default function App({
         <div className='stars'></div>
 
         <div className='twinkling'></div>
-
+        <div className='black-overlay'></div>
         <div className='clouds'></div>
       </div>
     </SessionProvider>
