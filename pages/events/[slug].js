@@ -29,6 +29,8 @@ function EventPage({ eventData }) {
               <Image
                 className='object-cover rounded-lg'
                 alt='poster'
+                width={600}
+                height={600}
                 src={eventData.poster}
               />
             </div>
