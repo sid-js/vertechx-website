@@ -22,7 +22,7 @@ With science and technology growing at an alarming rate, facts and figures keep 
                         <Image
                             className='object-cover rounded-lg'
                             alt='poster'
-                            src={'https://ik.imagekit.io/pgvf1rv1sw/default-image.jpg?updatedAt=1682842631455'}
+                            src={'https://ik.imagekit.io/pgvf1rv1sw/Geekathon2.jpg?updatedAt=1682879686332'}
                             height={800}
                             width={900}
                         />
@@ -30,7 +30,7 @@ With science and technology growing at an alarming rate, facts and figures keep 
                     <div className='basis-2/3  flex flex-col gap-2 justify-between items-start min-h-full h-max'>
                         <div className='flex flex-col h-max'>
                             <h1 className=' text-4xl md:text-6xl font-semibold'>
-                                Geekathon
+                                GEEKathon
                             </h1>
                             <h3 className=' text-xl md:text-2xl font-normal text-slate-400'>
                             </h3>
@@ -41,7 +41,7 @@ With science and technology growing at an alarming rate, facts and figures keep 
                                 </span>
                             </div>
                             <p className='text-xl md:text-2xl mt-6 '>
-                                Speed!! Speed!! Speed!! Battle of Brains is a Technical Quiz game of questions and answers on all topics of TECHNICAL knowledge that is played by students.
+                                Speed!! Speed!! Speed!! GEEKathon is a Technical Quiz game of questions and answers on all topics of TECHNICAL knowledge that is played by students.
 
                                 With science and technology growing at an alarming rate, facts and figures keep adding up. To match the influx of this humongous amount of data we need a brain that&apos;s sharp as a razor and pliable as a rubber band. And the quest to search for this perfect brain ends at a technical quiz! With a wide array of questions from numerous technical topics, this is one event that will breach the boundaries of your technical lore.
                             </p>
@@ -53,7 +53,7 @@ With science and technology growing at an alarming rate, facts and figures keep 
                                 <span>Registration Fee : </span>
                                 <span>Free</span>
                             </div>
-                            <Link legacyBehavior={true} href={'https://www.youtube.com/watch?v=Ezo-CO6iWiY&pp=ygUPc2lkaGEgc2EgYmloYXJp'}>
+                            <Link legacyBehavior={true} href={'https://presenter.jivrus.com/p/1MX6mkbVpXaSg4M-QjlpvNrwIQuwv0HNRiWJY0_r46mY'}>
                                 <a
                                     target='_blank'
                                     ref
@@ -79,6 +79,27 @@ With science and technology growing at an alarming rate, facts and figures keep 
                             <li>2nd place: 2 DJ passes</li>
                             <li>3rd place: 1 DJ pass</li>
                         </ul>
+                        <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
+                            <h3 className="text-xl font-medium text-white underline decoration-purple-500">Student Co-ordinators:</h3>
+                            <p className="mt-2 text-white">
+                            Reethika Shree H -{" "}
+                                <a
+                                    href="tel:+917795236841"
+                                    className="underline font-bold text-pink-500 hover:text-pink-400"
+                                >
+                                   7795236841
+                                </a>
+                            </p>
+                            <p className="mt-2 text-white">
+                                Abhinav -{" "}
+                                <a
+                                    href="tel:+918017991099"
+                                    className="underline font-bold text-pink-500 hover:text-pink-400"
+                                >
+                                    8017991099
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
