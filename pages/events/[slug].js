@@ -49,7 +49,7 @@ function EventPage({ eventData }) {
                 <div className='text-xl md:text-2xl mt-6 flex flex-row gap-2 items-center'>
                   <FiCalendar className='text-purple-500' />
                   <span>
-                    {moment(eventData.date).format('MMMM Do YYYY, h:mm: a')}
+                    {moment(eventData.date).format('MMMM Do YYYY, h:mm A')}
                   </span>
                 </div>
                 <p className='text-xl md:text-2xl mt-6 '>{eventData.summary}</p>
