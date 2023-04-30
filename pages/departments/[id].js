@@ -56,6 +56,7 @@ function EventPage({ eventData }) {
                 in reprehenderit in.
               </p>
             </div>
+
             <div className='flex-col w-full gap-6 h-full flex'>
               <div className='text-xl md:text-2xl mt-6 flex flex-row gap-2 items-center'>
                 <TbCoinRupee className='text-purple-500' />
