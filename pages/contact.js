@@ -1,6 +1,7 @@
 import React from "react";
 import MainLayout from "@/Components/MainLayout";
-
+import Link from "next/link";
+import Image from "next/image";
 const Contact = () => {
   return (
     <MainLayout>
@@ -63,7 +64,7 @@ const Contact = () => {
                   <p className="mt-2 text-white">
                     Samhitha -{" "}
                     <a href="tel:+919591834216" className="underline font-bold text-pink-500 hover:text-pink-400">
-                    9591834216
+                      9591834216
                     </a>
                   </p>
                   <p className="mt-2 text-white">
@@ -76,7 +77,7 @@ const Contact = () => {
                     </a>
                   </p>
                   <p className="mt-2 text-white">
-                  Rithika -{" "}
+                    Rithika -{" "}
                     <a
                       href="tel:+917795236841" className="underline font-bold text-pink-500 hover:text-pink-400" >
                       7795236841
@@ -100,7 +101,7 @@ const Contact = () => {
                       href="tel:+919482230914"
                       className="underline font-bold text-pink-500 hover:text-pink-400"
                     >
-                     9482230914
+                      9482230914
                     </a>
                   </p>
                 </div>
@@ -112,7 +113,7 @@ const Contact = () => {
                       href="tel:+917019393492"
                       className="underline font-bold text-pink-500 hover:text-pink-400"
                     >
-                     7019393492
+                      7019393492
                     </a>
                   </p>
                   <p className="mt-2 text-white">
@@ -121,9 +122,36 @@ const Contact = () => {
                       href="tel:+918017991099"
                       className="underline font-bold text-pink-500 hover:text-pink-400"
                     >
-                    8017991099
+                      8017991099
                     </a>
                   </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-col items-center justify-center text-left w-full text-xl">
+                <div className="flex flex-row justify-center items-center gap-6 py-3">
+                  <div classname="group">
+                    <Link 
+                    className="flex justify-center items-center gap-4 text-white ls" 
+                    href="https://www.instagram.com/vertechx/">
+                      <img
+                      className="w-8 rounded-full group-hover:scale-105 transition duration-200"
+                      alt=""
+                      src="/insta.svg"
+                      />
+                        <span className="ls-2 group-hover:ls transition-all duration-300 hidden md:inline">INSTAGRAM</span>
+                    </Link>
+                  </div>
+                  <div className="">
+                    <Link 
+                    className="flex justify-center items-center gap-4 text-white ls group cursor-pointer" href="https://www.youtube.com/@vertechxofficial8784">
+                      <img className="w-10 group-hover:scale-105 transition duration-200 " 
+                      src="/vector.svg" 
+                      alt=""/>
+                        <span className="ls-2 group-hover:ls-1 transition-all duration-300 hidden md:inline">YOUTUBE</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
