@@ -6,10 +6,11 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import FeaturedEvents from '@/Components/FeaturedEvents';
 import MainLayout from '@/Components/MainLayout';
+import { prisma } from '@/prisma/client';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
-const Home = () => {
+const Home = ({ events }) => {
   return (
     <>
       <Head>
@@ -84,7 +85,7 @@ const Home = () => {
               </span>
             </div>
           </section>
-          <FeaturedEvents />
+          <FeaturedEvents events={events} />
         </main>
       </MainLayout>
     </>
@@ -92,3 +93,34 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  let events;
+  try {
+    events = await prisma.event.findMany({
+      orderBy: {
+        createdAt: 'desc',
+      },
+      select: {
+        name: true,
+        slug: true,
+        poster: true,
+        date: true,
+        registrationFee: true,
+        departmentId: true,
+        department: {
+          select: {
+            name: true,
+          },
+        },
+      },
+    });
+    console.log(events);
+    return {
+      props: { events },
+      revalidate: 30, // will be passed to the page component as props
+    };
+  } catch (e) {
+    console.log(e);
+  }
+}

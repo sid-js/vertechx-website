@@ -22,26 +22,8 @@ const responsive = {
   },
 };
 
-const sampleEvent = {
-  id: 'clgacco97000394icyi0ftrhx',
-  name: 'Capture with Linux',
-  slug: 'capture-with-linux',
-  summary:
-    "Capture with Linux is all about finding and exploiting various weaknesses and loopholes in the system. Let's find the embedded strings using Linux.",
-  content: `<p><strong>Oh no, it looks like the VertechX team forgot to send us the content for this section.</strong> Maybe they're off searching for the Loch Ness Monster or trying to find the source of the Nile. Who knows? In the meantime, here's a weird Wikipedia article to entertain you: did you know that in the 19th century, some people believed that a race of mole people lived beneath the streets of London? Yes, you read that right. It was believed that these mole people had their own society and even a royal family. Of course, there's no evidence to support these claims, but it's still a fascinating and bizarre piece of history.</p><p style="text-align: start">Speaking of bizarre things, have you ever heard of the Voynich Manuscript? It's a book that was written in an unknown script and contains strange illustrations of plants, animals, and other objects. Despite years of study, no one has been able to decipher the manuscript, and its origin and purpose remain a mystery.</p><p style="text-align: start">Anyway, we'll keep waiting for that content from the VertechX team. In the meantime, we hope they're not lost in some mysterious underground tunnel or trapped in a puzzle box somewhere. We'll just have to make do with weird Wikipedia articles for now.</p>`,
-  poster:
-    'https://ik.imagekit.io/vertechx/capture-with-linux?updatedAt=1681101151134',
-  type: 'event',
-  date: new Date(),
-  location: 'CSE Lab 256',
-  registrationFee: '200',
-  maximumRegistration: 100,
-  formLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-  createdAt: new Date(),
-  departmentId: 'clg0c7igq000494xw4v4vjfif',
-  department: { id: 'clg0c7igq000494xw4v4vjfif', name: 'Department of CSE' },
-};
-function FeaturedEvents() {
+function FeaturedEvents({ events }) {
+  let prevDept = '';
   return (
     <section
       id='Featured Events'
@@ -55,19 +37,24 @@ function FeaturedEvents() {
           responsive={responsive}
           className='w-full gap-10 py-8'
           autoPlay={true}
+          infinite={true}
           autoPlaySpeed={5000}
           showDots={true}
           swipeable={true}
           renderDotsOutside={true}
           dotListClass='dots'
         >
-          <EventCard eventData={sampleEvent} />
-          <EventCard eventData={sampleEvent} />
-          <EventCard eventData={sampleEvent} />
-          <EventCard eventData={sampleEvent} />
-          <EventCard eventData={sampleEvent} />
-          <EventCard eventData={sampleEvent} />
-          <EventCard eventData={sampleEvent} />
+          {
+            events?.map((event, index) => {
+              console.log(event, index);
+              if(!(event.departmentId === prevDept)){
+                prevDept = event.departmentId;
+                return <EventCard eventData={event} key={index} />;
+              }
+              else
+                return;
+            })
+          }
         </Carousel>
       </div>
     </section>
