@@ -3,6 +3,7 @@ import { SessionProvider } from 'next-auth/react';
 import Navbar from '@/Components/Navbar';
 import { useEffect, useRef, useState } from 'react';
 import { Space_Grotesk } from 'next/font/google';
+import Head from 'next/head';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -45,6 +46,29 @@ export default function App({
       <main
         className={`font-space h-screen w-full flex flex-col dark mb-8 ${spaceGrotesk.className}`}
       >
+        <Head>
+          <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/apple-touch-icon.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/favicon-32x32.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='/favicon-16x16.png'
+          />
+          <link rel='manifest' href='/site.webmanifest' />
+          <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+          <meta name='msapplication-TileColor' content='#da532c' />
+          <meta name='theme-color' content='#ffffff' />
+        </Head>
         <Component {...pageProps} />
       </main>
       <div className='-z-10 bg-fixed fixed top-0' ref={containerRef}>
