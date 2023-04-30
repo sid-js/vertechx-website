@@ -49,7 +49,7 @@ function FeaturedEvents({ events }) {
               console.log(event, index);
               if(!(event.departmentId === prevDept)){
                 prevDept = event.departmentId;
-                return <EventCard eventData={event} />;
+                return <EventCard eventData={event} key={index} />;
               }
               else
                 return;
