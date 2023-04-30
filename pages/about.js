@@ -25,8 +25,8 @@ const About = () => {
               </h1>
               <p className='text-xl md:text-2xl mt-6 '>
                 <br />
-                The place where it all began, the origin of life, and the unexplored realms. What can we gain by sailing to the moon if we are not able to cross the abyss that separates us from ourselves? This is the most important of all voyages of discovery, and without it, all the rest are not only useless but disastrous. There is a fifth dimension, beyond that which is known to man. It is a dimension as vast as space and as timeless as infinity. It is the middle ground between light and shadow, between science and superstition. Let's unravel these mysteries of the universe that is purely geometric- a beautiful shape twisting around and dancing over space-time.
-            Hold your breaths and get ready to launch yourselves into this abyssal realm and embark upon this expedition at the 11th edition of Vertechx. Mark your calendars! 19th-20th May 2023 it is!
+                The place where it all began, the origin of life, and the unexplored realms. What can we gain by sailing to the moon if we are not able to cross the abyss that separates us from ourselves&quest; This is the most important of all voyages of discovery, and without it, all the rest are not only useless but disastrous. There is a fifth dimension, beyond that which is known to man. It is a dimension as vast as space and as timeless as infinity. It is the middle ground between light and shadow, between science and superstition. Let&apos;s unravel these mysteries of the universe that is purely geometric- a beautiful shape twisting around and dancing over space-time.
+            Hold your breaths and get ready to launch yourselves into this abyssal realm and embark upon this expedition at the 11th edition of Vertechx. Mark your calendars&excl; 19th-20th May 2023 it is&excl;
               </p>
             </div>
             </div>
