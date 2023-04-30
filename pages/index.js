@@ -6,10 +6,11 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import FeaturedEvents from '@/Components/FeaturedEvents';
 import MainLayout from '@/Components/MainLayout';
+import { prisma } from '@/prisma/client';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
-const Home = () => {
+const Home = ({ events }) => {
   return (
     <>
       <Head>
@@ -80,12 +81,12 @@ const Home = () => {
               </span>
               <span className='bg-clip-text w-full items-center md:items-end text-transparent flex flex-col text-6xl md:text-9xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
                 <span>MAY</span>
-                <span>19 & 20</span>
+                <span>18 & 19</span>
               </span>
             </div>
           </section>
-          <FeaturedEvents />
-          <section className='w-full flex flex-col '>
+          <FeaturedEvents events={events} />
+          {/* <section className='w-full flex flex-col '>
             <div className='flex flex-col items-center justify-center'>
               <span className='mt-6 text-white text-5xl md:text-7xl font-space font-medium'>
                 OUR
@@ -113,7 +114,7 @@ const Home = () => {
                 a
               </div>
             </div>
-          </section>
+          </section> */}
         </main>
       </MainLayout>
     </>
@@ -121,3 +122,34 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  let events;
+  try {
+    events = await prisma.event.findMany({
+      orderBy: {
+        createdAt: 'desc',
+      },
+      select: {
+        name: true,
+        slug: true,
+        poster: true,
+        date: true,
+        registrationFee: true,
+        departmentId: true,
+        department: {
+          select: {
+            name: true,
+          },
+        },
+      },
+    });
+    console.log(events);
+    return {
+      props: { events },
+      revalidate: 30, // will be passed to the page component as props
+    };
+  } catch (e) {
+    console.log(e);
+  }
+}
