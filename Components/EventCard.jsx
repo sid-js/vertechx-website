@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FiCalendar } from 'react-icons/fi';
+import { TbTrophy } from 'react-icons/tb';
 
 const EventCard = ({ eventData }) => {
   return (
@@ -30,6 +31,10 @@ const EventCard = ({ eventData }) => {
           <div className='text-md md:text-md mt-2 flex flex-row gap-2 items-center'>
             <FiCalendar className='text-purple-500' />
             <span>{moment(eventData.date).format('MMMM Do YYYY')}</span>
+          </div>
+          <div className='text-md md:text-md mt-2 flex flex-row gap-2 items-center'>
+            <TbTrophy className='text-purple-500' />
+            <span>{eventData.prizeMoney + ' INR'}</span>
           </div>
         </div>
       </div>
