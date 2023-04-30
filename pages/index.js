@@ -86,35 +86,6 @@ const Home = ({ events }) => {
             </div>
           </section>
           <FeaturedEvents events={events} />
-          {/* <section className='w-full flex flex-col '>
-            <div className='flex flex-col items-center justify-center'>
-              <span className='mt-6 text-white text-5xl md:text-7xl font-space font-medium'>
-                OUR
-              </span>
-              <span className='text-5xl md:text-5xl font-medium font-space text-[#535353]'>
-                SPONSORS
-              </span>
-            </div>
-            <div className='flex justify-center items-center gap:32 md:gap-64 mt-6 flex-wrap'>
-              <div className='w-64 h-24 border-white bprder-4 text-white bg-gradient-to-b from-[#161616] to-transparent '>
-                a
-              </div>
-              <div className='w-64 h-24 border-white bprder-4 text-white bg-gradient-to-b from-[#161616] to-transparent'>
-                a
-              </div>
-              <div className='w-64 h-24 border-white bprder-4 text-white bg-gradient-to-b from-[#161616] to-transparent'>
-                a
-              </div>
-            </div>
-            <div className='flex justify-center items-center gap-64 mt-40'>
-              <div className='w-64 h-24 border-white bprder-4 text-white bg-gradient-to-b from-[#161616] to-transparent '>
-                a
-              </div>
-              <div className='w-64 h-24 border-white bprder-4 text-white bg-gradient-to-b from-[#161616] to-transparent '>
-                a
-              </div>
-            </div>
-          </section> */}
         </main>
       </MainLayout>
     </>
