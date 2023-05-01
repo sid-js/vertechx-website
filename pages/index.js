@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import FeaturedEvents from '@/Components/FeaturedEvents';
 import MainLayout from '@/Components/MainLayout';
 import { prisma } from '@/prisma/client';
+import Link from 'next/link';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -99,10 +100,10 @@ const Home = ({ events }) => {
                   <div className='tracking-wide text-4xl text-purple-400 font-bold'>Social Media</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
-                      <a href='https://www.youtube.com/@vertechxofficial8784' className='hover:underline text-xl text-gray-300'>Youtube</a>
+                      <Link href='https://www.youtube.com/@vertechxofficial8784' className='hover:underline text-xl text-gray-300'>Youtube</Link>
                     </li>
                     <li className='mt-4'>
-                      <a href='https://www.instagram.com/vertechx/' className='hover:underline text-xl text-gray-300'>Instagram</a>
+                      <Link href='https://www.instagram.com/vertechx/' className='hover:underline text-xl text-gray-300'>Instagram</Link>
                     </li>
                   </ul>
                 </div>
@@ -110,13 +111,13 @@ const Home = ({ events }) => {
                   <div className='tracking-wide text-4xl text-purple-400 font-bold'>Links</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
-                      <a href='/' className='hover:underline text-xl text-gray-300'>Home</a>
+                      <Link href='/' className='hover:underline text-xl text-gray-300'>Home</Link>
                     </li>
                     <li className='mt-4'>
-                      <a href='/about' className='hover:underline text-xl text-gray-300'>About</a>
+                      <Link href='/about' className='hover:underline text-xl text-gray-300'>About</Link>
                     </li>
                     <li className='mt-4'>
-                      <a href='/events' className='hover:underline text-xl text-gray-300'>Events</a>
+                      <Link href='/events' className='hover:underline text-xl text-gray-300'>Events</Link>
                     </li>
                   </ul>
                 </div>
@@ -124,7 +125,7 @@ const Home = ({ events }) => {
                   <div className='tracking-wide text-4xl text-purple-400 font-bold'>Location</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
-                      <a href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'>Address</a>
+                      <Link href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'>Address</Link>
                     </li>
                   </ul>
                   <div className="text-center py-20 text-gray-500 text-xs">
