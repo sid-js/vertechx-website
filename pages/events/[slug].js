@@ -5,7 +5,7 @@ import { prisma } from '@/prisma/client';
 import Link from 'next/link';
 import moment from 'moment/moment';
 import { FiCalendar } from 'react-icons/fi';
-import { TbCoinRupee } from 'react-icons/tb';
+import { TbCoinRupee, TbTrophy } from 'react-icons/tb';
 import parse from 'html-react-parser';
 import Navbar from '@/Components/Navbar';
 import Head from 'next/head';
@@ -49,17 +49,22 @@ function EventPage({ eventData }) {
                 <div className='text-xl md:text-2xl mt-6 flex flex-row gap-2 items-center'>
                   <FiCalendar className='text-purple-500' />
                   <span>
-                    {moment(eventData.date).format('MMMM Do YYYY, h:mm: a')}
+                    {moment(eventData.date).format('MMMM Do YYYY, h:mm A')}
                   </span>
                 </div>
                 <p className='text-xl md:text-2xl mt-6 '>{eventData.summary}</p>
               </div>
 
-              <div className='flex-col w-full gap-6 h-full flex'>
-                <div className='text-xl md:text-2xl mt-6 flex flex-row gap-2 items-center'>
-                  <TbCoinRupee className='text-purple-500' size={40} />
+              <div className='flex-col w-full gap-6 mt-6 h-full flex'>
+                <div className='text-xl md:text-2xl  flex flex-row gap-2 items-center'>
+                  <TbCoinRupee className='text-purple-500' size={30} />
                   <span>Registration Fee : </span>
-                  <span>{eventData.registrationFee}</span>
+                  <span>{eventData.registrationFee + ' '}INR</span>
+                </div>
+                <div className='text-xl md:text-2xl  flex flex-row gap-2 items-center'>
+                  <TbTrophy className='text-purple-500' size={30} />
+                  <span>Prize Money : </span>
+                  <span>{eventData.prizeMoney + ' '}INR</span>
                 </div>
                 <Link legacyBehavior={true} href={eventData.formLink}>
                   <a
