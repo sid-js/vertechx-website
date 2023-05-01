@@ -83,21 +83,21 @@ With science and technology growing at an alarming rate, facts and figures keep 
                             <h3 className="text-xl font-medium text-white underline decoration-purple-500">Student Co-ordinators:</h3>
                             <p className="mt-2 text-white">
                             Reethika Shree H -{" "}
-                                <a
+                                <Link
                                     href="tel:+917795236841"
                                     className="underline font-bold text-pink-500 hover:text-pink-400"
                                 >
                                    7795236841
-                                </a>
+                                </Link>
                             </p>
                             <p className="mt-2 text-white">
                                 Abhinav -{" "}
-                                <a
+                                <Link
                                     href="tel:+918017991099"
                                     className="underline font-bold text-pink-500 hover:text-pink-400"
                                 >
                                     8017991099
-                                </a>
+                                </Link>
                             </p>
                         </div>
                     </div>
