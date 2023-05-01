@@ -17,7 +17,7 @@ const Contact = () => {
             <div className="flex flex-col items-center justify-center text-left w-full text-xl">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
-                  <h3 className="text-xl font-medium text-white underline decoration-purple-500  top-0">Overall cordinator:</h3>
+                  <h3 className="text-xl font-medium text-white underline decoration-purple-500  top-0">Chief Co-ordinator:</h3>
                   <p className="mt-2 text-white">
                     Rodney -{" "}
                     <a href="tel:+9739482736" className="underline font-bold text-pink-500 hover:text-pink-400">
@@ -46,7 +46,7 @@ const Contact = () => {
                     </a>
                   </p>
                   <p className="mt-2 text-white">
-                    Sudhanava -{" "}
+                    Sudhanwa -{" "}
                     <a href="tel:+919916767279" className="underline font-bold text-pink-500 hover:text-pink-400">
                       9916767279
                     </a>
@@ -62,9 +62,9 @@ const Contact = () => {
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
                   <h3 className="text-xl font-medium text-white underline decoration-purple-500">Events related Query:</h3>
                   <p className="mt-2 text-white">
-                    Samhitha -{" "}
-                    <a href="tel:+919591834216" className="underline font-bold text-pink-500 hover:text-pink-400">
-                      9591834216
+                    Prateek -{" "}
+                    <a href="tel:+917249372899" className="underline font-bold text-pink-500 hover:text-pink-400">
+                    7249372899
                     </a>
                   </p>
                   <p className="mt-2 text-white">
@@ -77,7 +77,7 @@ const Contact = () => {
                     </a>
                   </p>
                   <p className="mt-2 text-white">
-                    Rithika -{" "}
+                    Reethika -{" "}
                     <a
                       href="tel:+917795236841" className="underline font-bold text-pink-500 hover:text-pink-400" >
                       7795236841
@@ -85,23 +85,23 @@ const Contact = () => {
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
-                  <h3 className="text-xl font-medium text-white underline decoration-purple-500">Registration:</h3>
+                  <h3 className="text-xl font-medium text-white underline decoration-purple-500">Registration Queries:</h3>
                   <p className="mt-2 text-white">
-                    Prateek -{" "}
+                    Samhitha -{" "}
                     <a
-                      href="tel:+917249372899"
+                      href="tel:+919591834216"
                       className="underline font-bold text-pink-500 hover:text-pink-400"
                     >
-                      7249372899
+                      9591834216
                     </a>
                   </p>
                   <p className="mt-2 text-white">
-                    Harsha -{" "}
+                    Rohit -{" "}
                     <a
-                      href="tel:+919482230914"
+                      href="tel:+919731021515"
                       className="underline font-bold text-pink-500 hover:text-pink-400"
                     >
-                      9482230914
+                      9731021515
                     </a>
                   </p>
                 </div>
@@ -126,6 +126,18 @@ const Contact = () => {
                     </a>
                   </p>
                 </div>
+                <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
+                  <h3 className="text-xl font-medium text-white underline decoration-purple-500">Faculty Co-ordinator:</h3>
+                  <p className="mt-2 text-white">
+                  Hameem I Shanavas-{" "}
+                    <a
+                      href="tel:+919620959690"
+                      className="underline font-bold text-pink-500 hover:text-pink-400"
+                    >
+                      9620959690
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
             <div>
@@ -136,9 +148,9 @@ const Contact = () => {
                     className="flex justify-center items-center gap-4 text-white ls" 
                     href="https://www.instagram.com/vertechx/">
                       <img
-                      className="w-8 rounded-full group-hover:scale-105 transition duration-200"
+                      className="w-8  group-hover:scale-105 transition duration-200"
                       alt=""
-                      src="/insta.svg"
+                      src="/newinsta.svg"
                       />
                         <span className="ls-2 group-hover:ls transition-all duration-300 hidden md:inline">INSTAGRAM</span>
                     </Link>
