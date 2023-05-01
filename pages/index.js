@@ -86,41 +86,89 @@ const Home = ({ events }) => {
             </div>
           </section>
           <FeaturedEvents events={events} />
-        </main>
-      </MainLayout>
-    </>
-  );
+          <footer className='w-full bg-cover bg-center text-white'>
+            <div className='flex flex-col md:flex-row justify-between items-start gap-4 md:gap-36 w-[95%] md:w-[100%] h-max bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-8 md:p-10'>
+              <div className='lg:flex lg:items-center lg:justify-start'>
+                <div className='flex justify-center lg:justify-start'>
+                  <img className='h-40 w-auto' src='/mvjlogo.svg' alt='VertechX logo' />
+                </div>
+                <div className="hidden h-60 lg:block border-l-2 border-gray-300  ml-8"></div>
+              </div>
+              <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-start'>
+                <div className='mt-8 lg:mt-0'>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold'>Social Media</div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <a href='https://www.youtube.com/@vertechxofficial8784' className='hover:underline text-xl text-gray-300'>Youtube</a>
+                    </li>
+                    <li className='mt-4'>
+                      <a href='https://www.instagram.com/vertechx/' className='hover:underline text-xl text-gray-300'>Instagram</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className='mt-8 md:mt-0 md:ml-10'>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold'>Links</div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <a href='/' className='hover:underline text-xl text-gray-300'>Home</a>
+                    </li>
+                    <li className='mt-4'>
+                      <a href='/about' className='hover:underline text-xl text-gray-300'>About</a>
+                    </li>
+                    <li className='mt-4'>
+                      <a href='/events' className='hover:underline text-xl text-gray-300'>Events</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className='mt-8 md:mt-0 md:ml-10'>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold'>Location</div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <a href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'>Address</a>
+                    </li>
+                  </ul>
+                  <div className="text-center py-20 text-gray-500 text-xs">
+                    Made with love by VERTECHX dev team
+                  </div>
+                </div>
+              </div>
+              </div>
+              </footer>
+            </main>
+          </MainLayout>
+        </>
+        );
 };
 
-export default Home;
+        export default Home;
 
-export async function getStaticProps() {
-  let events;
-  try {
-    events = await prisma.event.findMany({
-      orderBy: {
-        createdAt: 'desc',
-      },
-      select: {
-        name: true,
-        slug: true,
-        poster: true,
-        date: true,
-        registrationFee: true,
-        departmentId: true,
-        department: {
-          select: {
-            name: true,
-          },
-        },
-      },
-    });
-    console.log(events);
-    return {
-      props: { events },
-      revalidate: 30, // will be passed to the page component as props
+        export async function getStaticProps() {
+          let events;
+        try {
+          events = await prisma.event.findMany({
+            orderBy: {
+              createdAt: 'desc',
+            },
+            select: {
+              name: true,
+              slug: true,
+              poster: true,
+              date: true,
+              registrationFee: true,
+              departmentId: true,
+              department: {
+                select: {
+                  name: true,
+                },
+              },
+            },
+          });
+        console.log(events);
+        return {
+          props: {events},
+        revalidate: 30, // will be passed to the page component as props
     };
   } catch (e) {
-    console.log(e);
+          console.log(e);
   }
 }

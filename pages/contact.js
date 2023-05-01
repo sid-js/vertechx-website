@@ -34,6 +34,13 @@ const Contact = () => {
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
                   <h3 className="text-xl font-medium text-white underline decoration-purple-500 top-0">Core Team Handling:</h3>
                   <p className="mt-2 text-white">
+                    Kannan -{" "}
+                    <a href="tel:+918904901335" className="underline font-bold text-pink-500 hover:text-pink-400"
+                    >
+                      8904901335
+                    </a>
+                  </p>
+                  <p className="mt-2 text-white">
                     Shyam -{" "}
                     <a href="tel:+919945806428" className="underline font-bold text-pink-500 hover:text-pink-400" >
                       9945806428
@@ -51,20 +58,14 @@ const Contact = () => {
                       9916767279
                     </a>
                   </p>
-                  <p className="mt-2 text-white">
-                    Kannan -{" "}
-                    <a href="tel:+918904901335" className="underline font-bold text-pink-500 hover:text-pink-400"
-                    >
-                      8904901335
-                    </a>
-                  </p>
+                  
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
                   <h3 className="text-xl font-medium text-white underline decoration-purple-500">Events related Query:</h3>
                   <p className="mt-2 text-white">
                     Prateek -{" "}
                     <a href="tel:+917249372899" className="underline font-bold text-pink-500 hover:text-pink-400">
-                    7249372899
+                      7249372899
                     </a>
                   </p>
                   <p className="mt-2 text-white">
@@ -129,7 +130,7 @@ const Contact = () => {
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
                   <h3 className="text-xl font-medium text-white underline decoration-purple-500">Faculty Co-ordinator:</h3>
                   <p className="mt-2 text-white">
-                  Hameem I Shanavas-{" "}
+                    Hameem I Shanavas-{" "}
                     <a
                       href="tel:+919620959690"
                       className="underline font-bold text-pink-500 hover:text-pink-400"
@@ -140,37 +141,32 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex flex-col items-center justify-center text-left w-full text-xl">
-                <div className="flex flex-row justify-center items-center gap-6 py-3">
-                  <div classname="group">
-                    <Link 
-                    className="flex justify-center items-center gap-4 text-white ls" 
-                    href="https://www.instagram.com/vertechx/">
-                      <img
-                      className="w-8  group-hover:scale-105 transition duration-200"
-                      alt=""
-                      src="/newinsta.svg"
-                      />
-                        <span className="ls-2 group-hover:ls transition-all duration-300 hidden md:inline">INSTAGRAM</span>
-                    </Link>
-                  </div>
-                  <div className="">
-                    <Link 
-                    className="flex justify-center items-center gap-4 text-white ls group cursor-pointer" href="https://www.youtube.com/@vertechxofficial8784">
-                      <img className="w-10 group-hover:scale-105 transition duration-200 " 
-                      src="/vector.svg" 
-                      alt=""/>
-                        <span className="ls-2 group-hover:ls-1 transition-all duration-300 hidden md:inline">YOUTUBE</span>
-                    </Link>
-                  </div>
+            <div class="flex flex-col items-center justify-center text-left w-full text-xl">
+              <div class="flex flex-row justify-center items-center gap-6 py-3">
+                <div class="group">
+                  <a href="https://www.instagram.com/vertechx/" class="flex justify-center items-center gap-4 text-white ls">
+                    <img src="/newinsta.svg" alt="" class="w-8 h-8 group-hover:scale-105 transition duration-200" />
+                  </a>
+                </div>
+                <div class="h-6 w-px bg-white"></div>
+                <div class="group">
+                  <a href="http://surl.li/gsmne" class="flex justify-center items-center gap-4 text-white ls group cursor-pointer">
+                    <img src="/location.svg" alt="" class="w-8 h-10 group-hover:scale-105 transition duration-200" />
+                  </a>
+                </div>
+                <div class="h-6 w-px bg-white"></div>
+                <div class="group">
+                  <a href="https://www.youtube.com/@vertechxofficial8784" class="flex justify-center items-center gap-4 text-white ls group cursor-pointer">
+                    <img src="/vector.svg" alt="" class="w-8 h-8 group-hover:scale-105 transition duration-200" />
+                  </a>
                 </div>
               </div>
+              <p class="text-white font-semibold text-lg tracking-wider hover:text-purple-400 transition duration-200 uppercase mt-3">Follow us on our socials and visit us</p>
             </div>
           </div>
         </article>
       </section>
-    </MainLayout>
+    </MainLayout >
   );
 };
 export default Contact;

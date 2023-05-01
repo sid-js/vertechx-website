@@ -8,7 +8,7 @@ function Navbar() {
     setShowMenu(!showMenu);
   };
   return (
-    <nav className='fixed top-0 flex flex-wrap w-full  z-50 px-5 py-2 bg-white bg-opacity-0 flex items-center backdrop-blur-sm border border-none rounded-lg'>
+    <nav className='fixed top-0 flex flex-wrap w-full  z-50 px-5 py-2 bg-white bg-opacity-0  items-center backdrop-blur-sm border border-none rounded-lg'>
       <div className='w-full flex flex-wrap items-center justify-between p-5'>
         <Link href='/' className='flex items-center'>
           <img
