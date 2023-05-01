@@ -107,6 +107,7 @@ export async function getStaticProps() {
         poster: true,
         date: true,
         registrationFee: true,
+        prizeMoney: true,
         departmentId: true,
         department: {
           select: {

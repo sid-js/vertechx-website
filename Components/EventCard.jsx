@@ -34,7 +34,7 @@ const EventCard = ({ eventData }) => {
           </div>
           <div className='text-md md:text-md mt-2 flex flex-row gap-2 items-center'>
             <TbTrophy className='text-purple-500' />
-            <span>{eventData.prizeMoney + ' INR'}</span>
+            <span>{eventData.prizeMoney}</span>
           </div>
         </div>
       </div>
