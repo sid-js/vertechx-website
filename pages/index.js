@@ -142,31 +142,33 @@ const Home = ({ events }) => {
 
         export default Home;
 
-        export async function getStaticProps() {
-          let events;
-        try {
-          events = await prisma.event.findMany({
-            orderBy: {
-              createdAt: 'desc',
-            },
-            select: {
-              name: true,
-              slug: true,
-              poster: true,
-              date: true,
-              registrationFee: true,
-              departmentId: true,
-              department: {
-                select: {
-                  name: true,
-                },
-              },
-            },
-          });
-        console.log(events);
-        return {
-          props: {events},
-        revalidate: 30, // will be passed to the page component as props
+export async function getStaticProps() {
+  let events;
+  try {
+    events = await prisma.event.findMany({
+      orderBy: {
+        createdAt: 'desc',
+      },
+      select: {
+        name: true,
+        slug: true,
+        poster: true,
+        date: true,
+        registrationFee: true,
+        prizeMoney: true,
+        departmentId: true,
+        department: {
+          select: {
+            name: true,
+          },
+        },
+      },
+    });
+    console.log(events);
+    return {
+      props: { events },
+      revalidate: 30, // will be passed to the page component as props
+
     };
   } catch (e) {
           console.log(e);
