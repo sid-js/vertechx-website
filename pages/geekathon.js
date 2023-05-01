@@ -12,7 +12,7 @@ const geekathon = () => {
                 <title>Geekathon</title>
                 <meta name='description' content='Speed!! Speed!! Speed!! Battle of Brains is a Technical Quiz game of questions and answers on all topics of TECHNICAL knowledge that is played by students. 
 
-With science and technology growing at an alarming rate, facts and figures keep adding up. To match the influx of this humongous amount of data we need a brain that’s sharp as a razor and pliable as a rubber band. And the quest to search for this perfect brain ends at a technical quiz! With a wide array of questions from numerous technical topics, this is one event that will breach the boundaries of your technical lore.' />
+With science and technology growing at an alarming rate, facts and figures keep adding up. To match the influx of this humongous amount of data we need a brain that&apos;s sharp as a razor and pliable as a rubber band. And the quest to search for this perfect brain ends at a technical quiz! With a wide array of questions from numerous technical topics, this is one event that will breach the boundaries of your technical lore.' />
                 <link rel="icon" href="/favicon.ico" />
 
             </Head>
@@ -37,7 +37,7 @@ With science and technology growing at an alarming rate, facts and figures keep 
                             <div className='text-xl md:text-2xl mt-6 flex flex-row gap-2 items-center'>
                                 <FiCalendar className='text-purple-500' />
                                 <span>
-                                    {moment().format('MMMM Do YYYY, h:mm: a')}
+                                    {moment().format('MMMM Do YYYYs')}
                                 </span>
                             </div>
                             <p className='text-xl md:text-2xl mt-6 '>
