@@ -79,7 +79,7 @@ function EventPage({ eventData }) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-between gap-4 w-[95%] md:w-full items-start bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-8 md:p-10 mb-6'>
+          <div className='flex flex-col justify-between gap-4 w-[95%] md:w-full items-start bg-black bg-opacity-40 backdrop-blur-md border border-gray-700 rounded-lg p-8 md:p-10 mb-6'>
             <h3 className=' text-2xl md:text-3xl font-normal text-slate-100'>
               Event Overview
             </h3>
