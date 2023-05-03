@@ -125,7 +125,7 @@ const Home = ({ events }) => {
                   <div className='tracking-wide text-2xl text-purple-400 font-bold '>Visitors Registration</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
-                      <Link href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'> Register now</Link>
+                      <Link href='https://forms.gle/oPpUedEVqXprKHRZ6' className='hover:underline text-xl text-gray-300'> Register now</Link>
                     </li>
                   </ul>
                 </div>
@@ -133,7 +133,7 @@ const Home = ({ events }) => {
                   <div className='tracking-wide text-2xl text-purple-400 font-bold '>Location</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
-                      <Link href='https://forms.gle/oPpUedEVqXprKHRZ6' className='hover:underline text-xl text-gray-300'> Near ITPL Main Road, 3G Homes Crimson Layout, Kadugodi, Bengaluru, Karnataka 560067</Link>
+                      <Link href='https://www.google.com/maps/place/MVJ+College+of+Engineering/@12.984114,77.7599852,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae0e0ddee6891b:0xbde773e8a7f7189d!8m2!3d12.984114!4d77.7621739!16s%2Fm%2F0b6ltsx' className='hover:underline text-xl text-gray-300'> Near ITPL Main Road, 3G Homes Crimson Layout, Kadugodi, Bengaluru, Karnataka 560067</Link>
                     </li>
                   </ul>
                   <div className="text-center py-20 text-gray-500 text-xs">
