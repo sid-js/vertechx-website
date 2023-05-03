@@ -10,7 +10,7 @@ const About = () => {
             </Head>
             <MainLayout>
                 <div className='w-full  bg-no-repeat items-center bg-cover md:px-32 mt-24 flex flex-col  dark:text-white min-h-screen h-full gap-8 p-6'>
-                    <div className='flex flex-col md:flex-row-reverse justify-between gap-4 md:gap-36 w-[95%] md:w-[100%] items-start h-max bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-8 md:p-10'>
+                    <div className='flex flex-col md:flex-row-reverse justify-between gap-4 md:gap-36 w-[95%] md:w-[100%] items-start h-max bg-black bg-opacity-40 backdrop-blur-md border border-gray-700 rounded-lg p-8 md:p-10'>
                         <div className='basis-6/7  flex flex-col gap-2 justify-between items-start min-h-full h-max'>
                             <div className='flex flex-col h-max'>
                                 <h1 className=' text-4xl md:text-6xl font-semibold no-underline hover:underline text-purple-600'>
