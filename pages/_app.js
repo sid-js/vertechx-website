@@ -4,6 +4,7 @@ import Navbar from '@/Components/Navbar';
 import { useEffect, useRef, useState } from 'react';
 import { Space_Grotesk } from 'next/font/google';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -89,6 +90,7 @@ export default function App({
         <div className='black-overlay'></div>
         <div className='clouds'></div>
       </div>
+      <Analytics />
     </SessionProvider>
   );
 }
