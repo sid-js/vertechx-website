@@ -74,6 +74,11 @@ const About = () => {
                                             12.	Participants must abide by the rules and regulations of MVJ College of Engineering at all times.
                                         </li>
                                     </ul><br/>
+                                    <ul>
+                                        <li>
+                                            12.	Any kind of refund will not be entertained .
+                                        </li>
+                                    </ul><br/>
                                   
                                 </p>
                             </div>

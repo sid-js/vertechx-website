@@ -153,7 +153,7 @@ const Contact = () => {
                 </div>
                 <div class="h-6 w-px bg-white"></div>
                 <div class="group">
-                  <a href="http://surl.li/gsmne" class="flex justify-center items-center gap-4 text-white ls group cursor-pointer">
+                  <a href="https://www.google.com/maps/place/MVJ+College+of+Engineering/@12.984114,77.7599852,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae0e0ddee6891b:0xbde773e8a7f7189d!8m2!3d12.984114!4d77.7621739!16s%2Fm%2F0b6ltsx" class="flex justify-center items-center gap-4 text-white ls group cursor-pointer">
                     <TbMapPinFilled size={45}/>
                   </a>
                 </div>
