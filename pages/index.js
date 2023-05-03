@@ -97,7 +97,7 @@ const Home = ({ events }) => {
               </div>
               <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-start'>
                 <div className='mt-8 lg:mt-0'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold'>Social Media</div>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Social Media</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
                       <Link href='https://www.youtube.com/@vertechxofficial8784' className='hover:underline text-xl text-gray-300'>Youtube</Link>
@@ -108,7 +108,7 @@ const Home = ({ events }) => {
                   </ul>
                 </div>
                 <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold'>Links</div>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Links</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
                       <Link href='/' className='hover:underline text-xl text-gray-300'>Home</Link>
@@ -122,10 +122,18 @@ const Home = ({ events }) => {
                   </ul>
                 </div>
                 <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold'>Location</div>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Visitors Registration</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
-                      <Link href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'>Address</Link>
+                      <Link href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'> Register now</Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className='mt-8 md:mt-0 md:ml-10'>
+                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Location</div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <Link href='https://forms.gle/oPpUedEVqXprKHRZ6' className='hover:underline text-xl text-gray-300'> Near ITPL Main Road, 3G Homes Crimson Layout, Kadugodi, Bengaluru, Karnataka 560067</Link>
                     </li>
                   </ul>
                   <div className="text-center py-20 text-gray-500 text-xs">

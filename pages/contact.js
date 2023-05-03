@@ -161,7 +161,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              <p class="text-white font-semibold text-lg tracking-wider hover:text-purple-400 transition duration-200 uppercase mt-3">Follow us on our socials and visit us</p>
+              <p class="text-white font-semibold text-lg tracking-wider hover:text-purple-400 transition duration-200  mt-3">Reach us out</p>
             </div>
           </div>
         </article>
