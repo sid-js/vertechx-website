@@ -9,6 +9,7 @@ import MainLayout from '@/Components/MainLayout';
 import { prisma } from '@/prisma/client';
 import Link from 'next/link';
 import { VscGithub } from 'react-icons/vsc';
+import { HiOutlineCursorClick } from 'react-icons/hi';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -89,14 +90,17 @@ const Home = ({ events }) => {
           </section>
           <FeaturedEvents events={events} />
           <footer className='w-full bg-cover bg-center text-white bg-black bg-opacity-40 backdrop-blur-lg border border-gray-700 rounded-lg p-8 md:p-10'>
-            <div className='flex flex-col md:flex-row justify-between items-start gap-2 md:gap-5 w-[95%] md:w-[100%] h-max '>
+            <div className='flex flex-col md:flex-row justify-start items-start gap-2 md:gap-14 w-[95%] md:w-[100%] h-max '>
               <div className='lg:flex lg:items-center lg:justify-start'>
                 <div className='flex flex-col justify-start items-start lg:justify-start md:max-w-md'>
-                  <img
-                    className='h-24 w-auto'
-                    src='/mvjlogo.svg'
-                    alt='VertechX logo'
-                  />
+                  <Link href={'https://mvjce.edu.in'}>
+                    <img
+                      className='h-24 w-auto'
+                      src='/mvjlogo.svg'
+                      alt='VertechX logo'
+                    />
+                  </Link>
+
                   <div className=''>
                     <ul className='mt-4'>
                       <li className='mt-4'>
@@ -105,8 +109,8 @@ const Home = ({ events }) => {
                           className='hover:underline text-lg text-gray-300'
                         >
                           {' '}
-                          Near ITPL Main Road, 3G Homes Crimson Layout,
-                          Kadugodi, Bengaluru, Karnataka 560067
+                          Near ITPB, Channasandra, Bangalore - 560067
+                          <br /> T: +91 80 4299 1000
                         </Link>
                       </li>
                     </ul>
@@ -189,10 +193,13 @@ const Home = ({ events }) => {
             </div>
             <Link
               href={'https://github.com/sid-js/vertechx-website'}
-              className='text-left pt-10 text-gray-200 text-base md:text-lg flex flex-row gap-4 items-center justify-end  hover:text-purple-400'
+              className='text-left pt-12 md:pt-28 text-gray-300 text-base md:text-lg flex flex-row gap-4 items-center justify-start  hover:text-purple-400'
             >
               <VscGithub size={30} />
-              <span>Made with love by VertechX Dev Team</span>
+              <span className='flex flex-row gap-4'>
+                Made with love by <br />
+                VertechX Dev Team (GitHub)
+              </span>
             </Link>
           </footer>
         </main>
