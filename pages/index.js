@@ -17,13 +17,41 @@ const Home = ({ events }) => {
   return (
     <>
       <Head>
-        <title>VertechX - Home</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta name='description' content='TECH IN MOMENTUM' />
-        <meta name='keywords' content='TECH IN MOMENTUM' />
+        <title>VertechX - MVJCE's National Tech Fest</title>
+        <meta name='title' content="VertechX - MVJCE's National Tech Fest" />
+        <meta
+          name='description'
+          content='Experience the future at VertechX: The ultimate annual tech fest where students flaunt their skills in robotics, AI, ML, and cybersecurity and more!'
+        />
+
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://vertechx.mvjce.edu.in/' />
+        <meta
+          property='og:title'
+          content="VertechX - MVJCE's National Tech Fest"
+        />
+        <meta
+          property='og:description'
+          content='Experience the future at VertechX: The ultimate annual tech fest where students flaunt their skills in robotics, AI, ML, and cybersecurity and more!'
+        />
         <meta
           property='og:image'
-          content='https://vertechx.vercel.app/public/logo.svg'
+          content='https://vertechx.mvjce.edu.in/og.png'
+        />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://vertechx.mvjce.edu.in/' />
+        <meta
+          property='twitter:title'
+          content="VertechX - MVJCE's National Tech Fest"
+        />
+        <meta
+          property='twitter:description'
+          content='Experience the future at VertechX: The ultimate annual tech fest where students flaunt their skills in robotics, AI, ML, and cybersecurity and more!'
+        />
+        <meta
+          property='twitter:image'
+          content='https://vertechx.mvjce.edu.in/og.png'
         />
       </Head>
       <MainLayout>
