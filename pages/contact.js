@@ -2,6 +2,9 @@ import React from "react";
 import MainLayout from "@/Components/MainLayout";
 import Link from "next/link";
 import Image from "next/image";
+import { FiInstagram } from "react-icons/fi";
+import { TbMapPinFilled } from "react-icons/tb";
+import {GrYoutube} from "react-icons/gr";
 const Contact = () => {
   return (
     <MainLayout>
@@ -145,23 +148,23 @@ const Contact = () => {
               <div class="flex flex-row justify-center items-center gap-6 py-3">
                 <div class="group">
                   <a href="https://www.instagram.com/vertechx/" class="flex justify-center items-center gap-4 text-white ls">
-                    <img src="/newinsta.svg" alt="" class="w-8 h-8 group-hover:scale-105 transition duration-200" />
+                    <FiInstagram size={30}/>
                   </a>
                 </div>
                 <div class="h-6 w-px bg-white"></div>
                 <div class="group">
                   <a href="http://surl.li/gsmne" class="flex justify-center items-center gap-4 text-white ls group cursor-pointer">
-                    <img src="/location.svg" alt="" class="w-8 h-10 group-hover:scale-105 transition duration-200" />
+                    <TbMapPinFilled size={45}/>
                   </a>
                 </div>
                 <div class="h-6 w-px bg-white"></div>
                 <div class="group">
                   <a href="https://www.youtube.com/@vertechxofficial8784" class="flex justify-center items-center gap-4 text-white ls group cursor-pointer">
-                    <img src="/vector.svg" alt="" class="w-8 h-8 group-hover:scale-105 transition duration-200" />
+                    <GrYoutube size={30}/>
                   </a>
                 </div>
               </div>
-              <p class="text-white font-semibold text-lg tracking-wider hover:text-purple-400 transition duration-200 uppercase mt-3">Follow us on our socials and visit us</p>
+              <p class="text-white font-semibold text-lg tracking-wider hover:text-purple-400 transition duration-200  mt-3">Reach us out</p>
             </div>
           </div>
         </article>

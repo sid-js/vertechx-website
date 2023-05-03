@@ -65,6 +65,14 @@ function Navbar() {
             </li>
             <li>
               <Link
+                href='/rules'
+                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              >
+                Guidelines
+              </Link>
+            </li>
+            <li>
+              <Link
                 href='/contact'
                 className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
@@ -102,6 +110,12 @@ function Navbar() {
               className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
             >
               GEEKathon
+            </Link>
+            <Link
+              href='/rules'
+              className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
+            >
+              Guidelines
             </Link>
             <Link
               href='/contact'
