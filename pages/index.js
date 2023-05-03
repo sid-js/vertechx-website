@@ -93,11 +93,11 @@ const Home = ({ events }) => {
                 <div className='flex justify-center lg:justify-start'>
                   <img className='h-40 w-auto' src='/mvjlogo.svg' alt='VertechX logo' />
                 </div>
-                <div className="hidden h-60 lg:block border-l-2 border-gray-300  ml-8"></div>
+                <div className="hidden h-48 lg:block border-l-2 border-gray-500 rounded-xl  ml-8"></div>
               </div>
-              <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-start'>
+              <div className='flex flex-col justify-center items-start md:flex-row md:justify-center md:items-start'>
                 <div className='mt-8 lg:mt-0'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Social Media</div>
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Social Media</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
                       <Link href='https://www.youtube.com/@vertechxofficial8784' className='hover:underline text-xl text-gray-300'>Youtube</Link>
@@ -108,7 +108,7 @@ const Home = ({ events }) => {
                   </ul>
                 </div>
                 <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Links</div>
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Links</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
                       <Link href='/' className='hover:underline text-xl text-gray-300'>Home</Link>
@@ -122,7 +122,7 @@ const Home = ({ events }) => {
                   </ul>
                 </div>
                 <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Visitors Registration</div>
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Visitors Registration</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
                       <Link href='http://surl.li/gsmne' className='hover:underline text-xl text-gray-300'> Register now</Link>
@@ -130,7 +130,7 @@ const Home = ({ events }) => {
                   </ul>
                 </div>
                 <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-4xl text-purple-400 font-bold '>Location</div>
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Location</div>
                   <ul className='mt-4'>
                     <li className='mt-4'>
                       <Link href='https://forms.gle/oPpUedEVqXprKHRZ6' className='hover:underline text-xl text-gray-300'> Near ITPL Main Road, 3G Homes Crimson Layout, Kadugodi, Bengaluru, Karnataka 560067</Link>
