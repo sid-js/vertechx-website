@@ -17,7 +17,7 @@ const Home = ({ events }) => {
   return (
     <>
       <Head>
-        <title>VertechX - MVJCE's National Tech Fest</title>
+        <title>{`VertechX - MVJCE's National Tech Fest`}</title>
         <meta name='title' content="VertechX - MVJCE's National Tech Fest" />
         <meta
           name='description'
