@@ -8,6 +8,7 @@ import FeaturedEvents from '@/Components/FeaturedEvents';
 import MainLayout from '@/Components/MainLayout';
 import { prisma } from '@/prisma/client';
 import Link from 'next/link';
+import { VscGithub } from 'react-icons/vsc';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -87,69 +88,120 @@ const Home = ({ events }) => {
             </div>
           </section>
           <FeaturedEvents events={events} />
-          <footer className='w-full bg-cover bg-center text-white'>
-            <div className='flex flex-col md:flex-row justify-between items-start gap-4 md:gap-36 w-[95%] md:w-[100%] h-max bg-white bg-opacity-5 backdrop-blur-sm border border-gray-700 rounded-lg p-8 md:p-10'>
+          <footer className='w-full bg-cover bg-center text-white bg-black bg-opacity-40 backdrop-blur-lg border border-gray-700 rounded-lg p-8 md:p-10'>
+            <div className='flex flex-col md:flex-row justify-between items-start gap-2 md:gap-5 w-[95%] md:w-[100%] h-max '>
               <div className='lg:flex lg:items-center lg:justify-start'>
-                <div className='flex justify-center lg:justify-start'>
-                  <img className='h-40 w-auto' src='/mvjlogo.svg' alt='VertechX logo' />
+                <div className='flex flex-col justify-start items-start lg:justify-start md:max-w-md'>
+                  <img
+                    className='h-24 w-auto'
+                    src='/mvjlogo.svg'
+                    alt='VertechX logo'
+                  />
+                  <div className=''>
+                    <ul className='mt-4'>
+                      <li className='mt-4'>
+                        <Link
+                          href='https://www.google.com/maps/place/MVJ+College+of+Engineering/@12.984114,77.7599852,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae0e0ddee6891b:0xbde773e8a7f7189d!8m2!3d12.984114!4d77.7621739!16s%2Fm%2F0b6ltsx'
+                          className='hover:underline text-lg text-gray-300'
+                        >
+                          {' '}
+                          Near ITPL Main Road, 3G Homes Crimson Layout,
+                          Kadugodi, Bengaluru, Karnataka 560067
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="hidden h-48 lg:block border-l-2 border-gray-500 rounded-xl  ml-8"></div>
+                <div className='hidden h-36 lg:block border-l-2 border-gray-500 rounded-xl  ml-8'></div>
               </div>
               <div className='flex flex-col justify-center items-start md:flex-row md:justify-center md:items-start'>
                 <div className='mt-8 lg:mt-0'>
-                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Social Media</div>
-                  <ul className='mt-4'>
-                    <li className='mt-4'>
-                      <Link href='https://www.youtube.com/@vertechxofficial8784' className='hover:underline text-xl text-gray-300'>Youtube</Link>
-                    </li>
-                    <li className='mt-4'>
-                      <Link href='https://www.instagram.com/vertechx/' className='hover:underline text-xl text-gray-300'>Instagram</Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Links</div>
-                  <ul className='mt-4'>
-                    <li className='mt-4'>
-                      <Link href='/' className='hover:underline text-xl text-gray-300'>Home</Link>
-                    </li>
-                    <li className='mt-4'>
-                      <Link href='/about' className='hover:underline text-xl text-gray-300'>About</Link>
-                    </li>
-                    <li className='mt-4'>
-                      <Link href='/events' className='hover:underline text-xl text-gray-300'>Events</Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Visitors Registration</div>
-                  <ul className='mt-4'>
-                    <li className='mt-4'>
-                      <Link href='https://forms.gle/oPpUedEVqXprKHRZ6' className='hover:underline text-xl text-gray-300'> Register now</Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className='mt-8 md:mt-0 md:ml-10'>
-                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>Location</div>
-                  <ul className='mt-4'>
-                    <li className='mt-4'>
-                      <Link href='https://www.google.com/maps/place/MVJ+College+of+Engineering/@12.984114,77.7599852,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae0e0ddee6891b:0xbde773e8a7f7189d!8m2!3d12.984114!4d77.7621739!16s%2Fm%2F0b6ltsx' className='hover:underline text-xl text-gray-300'> Near ITPL Main Road, 3G Homes Crimson Layout, Kadugodi, Bengaluru, Karnataka 560067</Link>
-                    </li>
-                  </ul>
-                  <div className="text-center py-20 text-gray-500 text-xs">
-                    Made with love by VERTECHX dev team
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>
+                    Social Media
                   </div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <Link
+                        href='https://www.youtube.com/@vertechxofficial8784'
+                        className='hover:underline text-xl text-gray-300'
+                      >
+                        Youtube
+                      </Link>
+                    </li>
+                    <li className='mt-4'>
+                      <Link
+                        href='https://www.instagram.com/vertechx/'
+                        className='hover:underline text-xl text-gray-300'
+                      >
+                        Instagram
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className='mt-8 md:mt-0 md:ml-10'>
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>
+                    Links
+                  </div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <Link
+                        href='/'
+                        className='hover:underline text-xl text-gray-300'
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    <li className='mt-4'>
+                      <Link
+                        href='/about'
+                        className='hover:underline text-xl text-gray-300'
+                      >
+                        About
+                      </Link>
+                    </li>
+                    <li className='mt-4'>
+                      <Link
+                        href='/events'
+                        className='hover:underline text-xl text-gray-300'
+                      >
+                        Events
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className='mt-8 md:mt-0 md:ml-10'>
+                  <div className='tracking-wide text-2xl text-purple-400 font-bold '>
+                    Visitors Registration
+                  </div>
+                  <ul className='mt-4'>
+                    <li className='mt-4'>
+                      <Link
+                        href='https://forms.gle/oPpUedEVqXprKHRZ6'
+                        className='hover:underline text-xl text-gray-300'
+                      >
+                        {' '}
+                        Register now
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              </div>
-              </footer>
-            </main>
-          </MainLayout>
-        </>
-        );
+            </div>
+            <Link
+              href={'https://github.com/sid-js/vertechx-website'}
+              className='text-left pt-10 text-gray-200 text-base md:text-lg flex flex-row gap-4 items-center justify-end  hover:text-purple-400'
+            >
+              <VscGithub size={30} />
+              <span>Made with love by VertechX Dev Team</span>
+            </Link>
+          </footer>
+        </main>
+      </MainLayout>
+    </>
+  );
 };
 
-        export default Home;
+export default Home;
 
 export async function getStaticProps() {
   let events;
@@ -177,9 +229,8 @@ export async function getStaticProps() {
     return {
       props: { events },
       revalidate: 30, // will be passed to the page component as props
-
     };
   } catch (e) {
-          console.log(e);
+    console.log(e);
   }
 }
