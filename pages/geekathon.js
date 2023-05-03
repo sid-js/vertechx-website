@@ -58,7 +58,7 @@ With science and technology growing at an alarming rate, facts and figures keep 
                                 <span>Registration Fee : </span>
                                 <span>Free</span>
                             </div>
-                            <Link legacyBehavior={true} href={'https://presenter.jivrus.com/p/1MX6mkbVpXaSg4M-QjlpvNrwIQuwv0HNRiWJY0_r46mY'}>
+                            <Link legacyBehavior={true} href={'https://form-timer.com/start/17b48280'}>
                                 <a
                                     target='_blank'
                                     ref
