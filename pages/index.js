@@ -88,7 +88,6 @@ const Home = ({ events }) => {
               </span>
             </div>
           </section>
-          <FeaturedEvents events={events} />
           <footer className='w-full bg-cover bg-center text-white bg-black bg-opacity-40 backdrop-blur-lg border border-gray-700 rounded-lg p-8 md:p-10'>
             <div className='flex flex-col md:flex-row justify-start items-start gap-2 md:gap-14 w-[95%] md:w-[100%] h-max '>
               <div className='lg:flex lg:items-center lg:justify-start'>
