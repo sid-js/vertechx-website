@@ -10,6 +10,7 @@ This is the official website for the VertechX Tech Fest Event, organized by MVJ 
 - Mohit Sharma ([@Midyorker ](https://www.github.com/Midyorker)) - Frontend
 - Joel Thomas ([@JT10git ](https://www.github.com/JT10git)) - Backend
 - Karan Adam ([@karanadam ](https://www.github.com/karanadam)) - Design
+- U Pavan Kumar ([@UPavankumar ](https://www.github.com/UPavankumar)) - Frontend
 
 ![Contributers](https://ik.imagekit.io/vertechx/image.jpg?updatedAt=1683119710102)
 

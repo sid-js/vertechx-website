@@ -36,6 +36,7 @@ const About = () => {
                     <li>
                       3. The college reserves the right to cancel any event if
                       the requirement of minimum registrations are not met. 
+                      the requirement of minimum registrations are not met.
                     </li>
                   </ul>
                   <br />

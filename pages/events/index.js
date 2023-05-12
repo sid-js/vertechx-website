@@ -64,7 +64,27 @@ function AllEventsPage({ events }) {
   return (
     <>
       <Head>
-        <title>Events -VertechX</title>
+        <title>Events - VertechX</title>
+        <meta name='title' content='Events - VertechX' />
+        <meta
+          name='description'
+          content='Experience the future at VertechX: The ultimate annual tech fest where students flaunt their skills in robotics, AI, ML, and cybersecurity and more!'
+        />
+
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content='https://vertechx.mvjce.edu.in/events'
+        />
+        <meta property='og:title' content='Events - VertechX' />
+        <meta
+          property='og:description'
+          content='Experience the future at VertechX: The ultimate annual tech fest where students flaunt their skills in robotics, AI, ML, and cybersecurity and more!'
+        />
+        <meta
+          property='og:image'
+          content='https://vertechx.mvjce.edu.in/og.png'
+        />
       </Head>
       <MainLayout>
         <main className='mt-28 px-3 md:px-20 flex flex-col gap-10 w-full h-full'>

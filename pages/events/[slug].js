@@ -18,8 +18,16 @@ function EventPage({ eventData }) {
     <>
       <Head>
         <title>{eventData.name}</title>
-        <meta name='description' content={eventData.summary} />
-        <meta name='keywords' content={eventData.name} />
+        <meta name='title' content={`${eventData.name}`} />
+        <meta name='description' content={`${eventData.summary}`} />
+
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content={'https://vertechx.mvjce.edu.in/' + eventData.slug}
+        />
+        <meta property='og:title' content={`${eventData.name}`} />
+        <meta property='og:description' content={`${eventData.summary}`} />
         <meta property='og:image' content={eventData.poster} />
       </Head>
       <MainLayout>
