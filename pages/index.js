@@ -30,10 +30,10 @@ const Home = ({ events }) => {
         <main className='flex flex-col items-center w-full h-screen px-4 md:px-32 '>
           <header className='flex flex-col w-full h-screen justify-center items-center shrink-0 relative'>
             <div className='w-full h-1/2 blur-lg bg-black absolute opacity-10 top-50 z-[-1] rounded-full'></div>
-            <h1 className='bg-clip-text drop-shadow-sm text-transparent text-center self-center font-space text-6xl md:text-8xl lg:text-9xl font-extrabold  bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 cursor-pointer '>
-              TECH IN MOMENTUM
+            <h1 className='bg-clip-text drop-shadow-sm text-transparent text-center self-center font-space text-6xl md:text-8xl lg:text-8xl font-extrabold  bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 cursor-pointer '>
+             <span className='whitespace-no-wrap'>TECH IN MOMENTUM</span> 
             </h1>
-            <p className='text-white text-center self-center drop-shadow-md  font-space text-xl md:text-2xl lg:text-2xl font-regular  bg-gradient-to-r cursor-pointer '>
+            <p className='text-white text-center self-center drop-shadow-md  font-space text-xl md:text-xl lg:text-xl font-regular  bg-gradient-to-r cursor-pointer '>
               Experience the future at VertechX: The ultimate annual tech fest
               where students flaunt their skills in robotics, AI, ML, and
               cybersecurity and more!
@@ -77,6 +77,7 @@ const Home = ({ events }) => {
               </div>
             </article>
           </section>
+
           <section className='max-h-screen  mb-96 shrink-0'>
             <div className='flex flex-col md:flex-row md:gap-10 items-center justify-center w-full '>
               <span className='text-white text-2xl md:text-7xl font-semibold font-space'>
@@ -88,6 +89,114 @@ const Home = ({ events }) => {
               </span>
             </div>
           </section>
+          <section className='h-screen shrink-0'>
+            <div className='flex flex-col md:flex-row md:gap-10 items-center justify-center  w-full '>
+              <span className='text-slate-300 text-2xl md:text-5xl font-semibold font-space'>
+                FEATURED
+              </span>
+              <span className='bg-clip-text text-transparent text-4xl md:text-7xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
+                EVENTS :
+              </span>
+            </div>
+            <article className='flex items-center justify-center mt-6 overflow-x-auto'>
+              <div className='flex flex-col lg:flex-row items-center justify-center max-w-screen w-full gap-10 bg-white bg-opacity-10 backdrop-blur-md border h-full border-gray-700 rounded-lg p-4 md:p-6 '>
+                <div className='basis-3/5'>
+                  <Image
+                    className='object-cover rounded-lg'
+                    alt='Event poster'
+                    src={'https://ik.imagekit.io/pgvf1rv1sw/poster-2.png?updatedAt=1683864972226'}
+                    height={800}
+                    width={1300}
+                  />
+                </div>
+                <div className='flex items-center justify-center text-left basis-2/5 text-wrap md:text-xl'>
+                  <span className='text-white'>
+                    Register now for the events and win exciting prizes worth 5L!
+                  </span>
+                </div>
+                <a href="/" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </span>
+                  <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Register</span>
+                  <span class="relative invisible">Register</span>
+                </a>
+              </div>
+            </article>
+          </section>
+          <section className='h-screen shrink-0'>
+            <div className='flex flex-col md:flex-row md:gap-10 items-center justify-center  w-full '>
+              <span className='text-slate-300 text-2xl md:text-5xl font-semibold font-space'>
+                FEATURED
+              </span>
+              <span className='bg-clip-text text-transparent text-4xl md:text-7xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
+                WORKSHOP :
+              </span>
+            </div>
+            <article className='flex items-center justify-center mt-6 overflow-x-auto'>
+              <div className='flex flex-col lg:flex-row items-center justify-center max-w-screen w-full gap-10 bg-white bg-opacity-10 backdrop-blur-md border h-full border-gray-700 rounded-lg p-4 md:p-6 '>
+                <div className='basis-3/5'>
+                  <Image
+                    className='object-cover rounded-lg'
+                    alt='Event poster'
+                    src={'https://ik.imagekit.io/pgvf1rv1sw/poster-2.png?updatedAt=1683864972226'}
+                    height={600}
+                    width={1100}
+                  />
+                </div>
+                <div className='flex items-center justify-center text-left basis-2/5 text-wrap md:text-xl'>
+                  <span className='text-white'>
+                    Register now for the workshops and get the chance to learn from the best in the industry.
+
+                  </span>
+                </div>
+                <a href="https://linkbio.co/5051213Rtzfej" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </span>
+                  <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Register</span>
+                  <span class="relative invisible">Register</span>
+                </a>
+              </div>
+            </article>
+          </section>
+          <section className="py-8">
+          <div className='flex flex-col md:flex-row md:gap-10 items-center justify-center  w-full '>
+              <span className='text-slate-300 text-2xl md:text-5xl font-semibold font-space'>
+                OUR SPONSORS :
+              </span>
+             
+            </div>
+                <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
+                  <Image
+                    className="mx-auto"
+                    src="https://ik.imagekit.io/pgvf1rv1sw/3cee309e-4af8-4a1d-add1-cabbc9b2a555-removebg.png?updatedAt=1683902126474"
+                    alt="Sponsor 1"
+                    height={1500}
+                    width={1700}
+                  />
+                </div>
+                <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
+                <Image
+                    className="mx-auto"
+                    src="https://ik.imagekit.io/pgvf1rv1sw/3cee309e-4af8-4a1d-add1-cabbc9b2a555-removebg.png?updatedAt=1683902126474"
+                    alt="Sponsor 1"
+                    height={100}
+                    width={100}
+                  />
+                </div>
+                <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
+                <Image
+                    className="mx-auto"
+                    src="https://ik.imagekit.io/pgvf1rv1sw/3cee309e-4af8-4a1d-add1-cabbc9b2a555-removebg.png?updatedAt=1683902126474"
+                    alt="Sponsor 1"
+                    height={100}
+                    width={100}
+                  />
+              </div>
+          </section>
+
+
           <footer className='w-full bg-cover bg-center text-white bg-black bg-opacity-40 backdrop-blur-lg border border-gray-700 rounded-lg p-8 md:p-10'>
             <div className='flex flex-col md:flex-row justify-start items-start gap-2 md:gap-14 w-[95%] md:w-[100%] h-max '>
               <div className='lg:flex lg:items-center lg:justify-start'>
