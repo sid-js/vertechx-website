@@ -111,7 +111,7 @@ const Home = ({ events }) => {
               <span className='text-white text-2xl md:text-7xl font-semibold font-space'>
                 MARK YOUR CALENDARS
               </span>
-              <span className='bg-clip-text w-full items-center md:items-end text-transparent flex flex-col text-6xl md:text-9xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
+              <span className='bg-clip-text w-full items-center md:items-end text-transparent flex flex-col text-6xl md:text-8xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
                 <span>MAY</span>
                 <span>18 & 19</span>
               </span>
@@ -132,7 +132,7 @@ const Home = ({ events }) => {
                   <Image
                     className='object-cover rounded-lg'
                     alt='Event poster'
-                    src={'https://ik.imagekit.io/pgvf1rv1sw/poster-2.png?updatedAt=1683864972226'}
+                    src={'https://ik.imagekit.io/pgvf1rv1sw/events.png?updatedAt=1683953829001'}
                     height={800}
                     width={1300}
                   />
@@ -190,49 +190,50 @@ const Home = ({ events }) => {
           </section>
           <section className="py-8">
             <div className='flex flex-col md:flex-row md:gap-10 items-center justify-center w-full'>
-              <span className='text-slate-300 text-2xl md:text-5xl font-semibold font-space'>
-                OUR SPONSORS :
+              <span className='bg-clip-text text-transparent text-4xl md:text-7xl font-bold font-space bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer'>
+                OUR SPONSORS 
               </span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <Image
-                  className="mx-auto"
-                  src="https://ik.imagekit.io/pgvf1rv1sw/3cee309e-4af8-4a1d-add1-cabbc9b2a555-removebg.png?updatedAt=1683902126474"
+                <img
+                  className="mx-auto rounded-lg shadow-lg"
+                  src="https://ik.imagekit.io/pgvf1rv1sw/Nexus_new_ZT4qPrNJA?updatedAt=1683963387926"
                   alt="Sponsor 1"
-                  height={800}
-                  width={800}
+                  height={400}
+                  width={400}
                 />
               </div>
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <Image
-                  className="mx-auto"
-                  src="https://ik.imagekit.io/pgvf1rv1sw/Upgrad-removebg-preview.png?updatedAt=1683910350617"
+                <img
+                  className="mx-auto rounded-lg shadow-lg"
+                  src="https://ik.imagekit.io/pgvf1rv1sw/upgrad.png?updatedAt=1683953823452"
                   alt="Sponsor 1"
-                  height={800}
-                  width={800}
+                  height={400}
+                  width={400}
                 />
               </div>
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <Image
-                  className="mx-auto"
+                <img
+                  className="mx-auto rounded-lg shadow-lg"
+                  src="https://ik.imagekit.io/pgvf1rv1sw/Adobe_Scan_13-May-2023-1.png?updatedAt=1683958982088"
+                  alt="Sponsor 1" 
+                  height={400}
+                  width={400}
+                />
+              </div>
+              <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
+                <img
+                  className="mx-auto rounded-lg shadow-lg"
                   src="https://ik.imagekit.io/pgvf1rv1sw/Safexpress_Logo-1.png?updatedAt=1683910205716"
                   alt="Sponsor 1"
-                  height={800}
-                  width={800}
-                />
-              </div>
-              <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <Image
-                  className="mx-auto"
-                  src="https://ik.imagekit.io/pgvf1rv1sw/3cee309e-4af8-4a1d-add1-cabbc9b2a555-removebg.png?updatedAt=1683902126474"
-                  alt="Sponsor 1"
-                  height={800}
-                  width={800}
+                  height={400}
+                  width={400}
                 />
               </div>
             </div>
           </section>
+
 
 
 
