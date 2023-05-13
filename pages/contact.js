@@ -72,15 +72,6 @@ const Contact = () => {
                     </a>
                   </p>
                   <p className="mt-2 text-white">
-                    Tanisha -{" "}
-                    <a
-                      href="tel:+919731216858"
-                      className="underline font-bold text-pink-500 hover:text-pink-400"
-                    >
-                      9731216858
-                    </a>
-                  </p>
-                  <p className="mt-2 text-white">
                     Reethika -{" "}
                     <a
                       href="tel:+917795236841" className="underline font-bold text-pink-500 hover:text-pink-400" >
@@ -131,6 +122,48 @@ const Contact = () => {
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
+                  <h3 className="text-xl font-medium text-white underline decoration-purple-500">Website support:</h3>
+                  <p className="mt-2 text-white">
+                    Mohit Sharma -{" "}
+                    <a
+                      href="tel:+918553859240"
+                      className="underline font-bold text-pink-500 hover:text-pink-400"
+                    >
+                      8553859240
+                    </a>
+                  </p>
+                  <p className="mt-2 text-white">
+                    Sidharth Sreejil -{" "}
+                    <a
+                      href="tel:+917560877023"
+                      className="underline font-bold text-pink-500 hover:text-pink-400"
+                    >
+                      7560877023
+                    </a>
+                  </p>
+                  <p className="mt-2 text-white">
+                    Joel Thomas -{" "}
+                    <a
+                      href="tel:+918310819628"
+                      className="underline font-bold text-pink-500 hover:text-pink-400"
+                    >
+                      8310819628
+                    </a>
+                  </p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
+                  <h3 className="text-xl font-medium text-white underline decoration-purple-500">Accomodation:</h3>
+                  <p className="mt-2 text-white">
+                    Tanisha -{" "}
+                    <a
+                      href="tel:+919731216858"
+                      className="underline font-bold text-pink-500 hover:text-pink-400"
+                    >
+                      9731216858
+                    </a>
+                  </p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-4 text-center bg-black rounded-lg">
                   <h3 className="text-xl font-medium text-white underline decoration-purple-500">Faculty Co-ordinator:</h3>
                   <p className="mt-2 text-white">
                     Hameem I Shanavas-{" "}
@@ -142,6 +175,7 @@ const Contact = () => {
                     </a>
                   </p>
                 </div>
+               
               </div>
             </div>
             <div class="flex flex-col items-center justify-center text-left w-full text-xl">

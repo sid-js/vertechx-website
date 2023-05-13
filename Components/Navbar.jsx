@@ -33,7 +33,7 @@ function Navbar() {
             <li>
               <Link
                 href='/'
-                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                className='block py-2 pl-5 pr-4 text-l font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
                 aria-current='page'
               >
                 Home
@@ -42,7 +42,7 @@ function Navbar() {
             <li>
               <Link
                 href='/about'
-                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                className='block py-2 pl-5 pr-4 text-l font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 About
               </Link>
@@ -50,15 +50,23 @@ function Navbar() {
             <li>
               <Link
                 href='/events'
-                className='block py-2 pl-5 pr-4 text-xl font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                className='block py-2 pl-5 pr-4 text-l font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 Events
               </Link>
             </li>
             <li>
               <Link
+                href='https://linkbio.co/5051213Rtzfej'
+                className='block py-2 pl-5 pr-4 text-l font-space text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+              >
+                Workshops
+              </Link>
+            </li>
+            <li>
+              <Link
                 href='/geekathon'
-                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                className='block py-2 pl-5 pr-4 text-l font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 GEEKathon
               </Link>
@@ -66,7 +74,7 @@ function Navbar() {
             <li>
               <Link
                 href='/rules'
-                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                className='block py-2 pl-5 pr-4 text-l font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 Guidelines
               </Link>
@@ -74,7 +82,7 @@ function Navbar() {
             <li>
               <Link
                 href='/contact'
-                className='block py-2 pl-5 pr-4 text-xl font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                className='block py-2 pl-5 pr-4 text-l font-space  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-700 md:p-0 dark:text-white md:dark:hover:text-purple-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
               >
                 Contact
               </Link>
@@ -104,6 +112,12 @@ function Navbar() {
               className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
             >
               Events
+            </Link>
+            <Link
+              href='https://linkbio.co/5051213Rtzfej'
+              className='block px-3 py-2 text-base font-medium text-white  hover:text-purple-500 hover:bg-transparent'
+            >
+              Workshops
             </Link>
             <Link
               href='/geekathon'
