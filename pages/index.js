@@ -139,16 +139,16 @@ const Home = ({ events }) => {
                 </div>
                 <div className='flex items-center justify-center text-left basis-2/5 text-wrap md:text-xl'>
                   <span className='text-white'>
-                    Register now for the events and win exciting prizes worth 5L!
+                    Register now for the events and win exciting prizes worth 5 Lakhs!
                   </span>
                 </div>
-                <a href="/events" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+                <Link href="/events" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
                   <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                   </span>
                   <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Register</span>
                   <span class="relative invisible">Register</span>
-                </a>
+                </Link>
               </div>
             </article>
           </section>
@@ -178,13 +178,13 @@ const Home = ({ events }) => {
 
                   </span>
                 </div>
-                <a href="https://linkbio.co/5051213Rtzfej" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+                <Link href="https://linkbio.co/5051213Rtzfej" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
                   <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                   </span>
                   <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Register</span>
                   <span class="relative invisible">Register</span>
-                </a>
+                </Link>
               </div>
             </article>
           </section>
@@ -196,7 +196,7 @@ const Home = ({ events }) => {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <img
+                <Image
                   className="mx-auto rounded-lg shadow-lg"
                   src="https://ik.imagekit.io/pgvf1rv1sw/Nexus_new_ZT4qPrNJA?updatedAt=1683963387926"
                   alt="Sponsor 1"
@@ -205,7 +205,7 @@ const Home = ({ events }) => {
                 />
               </div>
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <img
+                <Image
                   className="mx-auto rounded-lg shadow-lg"
                   src="https://ik.imagekit.io/pgvf1rv1sw/upgrad.png?updatedAt=1683953823452"
                   alt="Sponsor 1"
@@ -214,7 +214,7 @@ const Home = ({ events }) => {
                 />
               </div>
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <img
+                <Image
                   className="mx-auto rounded-lg shadow-lg"
                   src="https://ik.imagekit.io/pgvf1rv1sw/Adobe_Scan_13-May-2023-1.png?updatedAt=1683958982088"
                   alt="Sponsor 1" 
@@ -223,7 +223,7 @@ const Home = ({ events }) => {
                 />
               </div>
               <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
-                <img
+                <Image
                   className="mx-auto rounded-lg shadow-lg"
                   src="https://ik.imagekit.io/pgvf1rv1sw/Safexpress_Logo-1.png?updatedAt=1683910205716"
                   alt="Sponsor 1"
